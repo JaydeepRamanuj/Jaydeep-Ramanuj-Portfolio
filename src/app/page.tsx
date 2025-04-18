@@ -1,103 +1,221 @@
+import SkillsSection from "@/components/SkillsSection";
+import {
+  AdditionalToolsAndLibraries,
+  experiences,
+  FamiliarAndExplored,
+  PrimarySkills,
+  projects,
+  qualifications,
+} from "./data";
+import ProjectCard from "@/components/ProjectCard";
+import SectionTitle from "@/components/SectionTitle";
+import { MdOutlineEmail } from "react-icons/md";
+import { IoCallOutline } from "react-icons/io5";
+import { FiGithub } from "react-icons/fi";
+import { SlSocialLinkedin } from "react-icons/sl";
+import ExperienceCard from "@/components/ExperienceCard";
 import Image from "next/image";
+import QualificationsCard from "@/components/QualificationsCard";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      {/* hero-section */}
+      <div className="bg-slate-950 flex justify-center flex-wrap-reverse items-center gap-24 pt-44 pb-32">
+        <div className="info max-w-[600px] p-3">
+          <h1 className="text-4xl font-bold">
+            Namaste, <br /> I&apos;m Jaydeep Ramanuj 👋
+          </h1>
+          <h1 className="mt-6">
+            I’m a frontend developer skilled in React and Next.js, aiming to
+            build fast, scalable, and responsive web applications that deliver
+            real value. With a year of teaching experience and freelance work, I
+            blend technical ability with strong communication. I aim to build
+            real-world solutions and grow both as a developer and as a person.
+          </h1>
+          <div className="flex mt-6 gap-6">
+            <a
+              href=""
+              className="block w-fit  p-1.5 rounded hover:bg-white/10 text-xl"
+            >
+              <FiGithub />
+            </a>
+            <a
+              href=""
+              className="block w-fit p-1.5 rounded hover:bg-white/10 text-xl"
+            >
+              <SlSocialLinkedin />
+            </a>
+          </div>
+          <button className="mt-6 px-4 py-1.5 rounded-full bg-slate-500/40 cursor-pointer hover:bg-slate-500/60 active:scale-95">
+            Download Resume
+          </button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+        <div>
+          <div className="h-[300px] w-[250px] rounded relative isolate after:w-full after:h-full after:bg-slate-500/40 after:rounded after:absolute after:top-10 after:left-10 after:-z-10">
+            <img
+              src="/hero-image.jpg"
+              alt="hero-image.jpg"
+              className="w-full h-full object-cover rounded z-10 border-8 border-black"
+            />
+          </div>
+        </div>
+      </div>
+      {/* about-section */}
+      <div className=" p-3 md:py-10 md:px-24 bg-slate-900">
+        <SectionTitle title="About me" />
+        <div></div>
+      </div>
+      {/* skills-section */}
+      <div className="p-3 md:py-10 md:px-24 bg-slate-950">
+        <SectionTitle title="Skills" />
+        <div className="mt-10 flex flex-wrap md:flex-nowrap gap-3 justify-evenly">
+          <SkillsSection
+            title="Primary (FrontEnd) Skills"
+            data={PrimarySkills}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <SkillsSection
+            title="Additional Skills (+ BackEnd)"
+            data={AdditionalToolsAndLibraries}
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <SkillsSection title="Explored skills" data={FamiliarAndExplored} />
+        </div>
+        <div className="w-fit mx-auto mt-6 flex flex-col sm:flex-row  bg-white/10 rounded-md sm:rounded-full  px-3 py-1 gap-6 ">
+          <div className="flex items-center gap-2">
+            <span className="block h-4 w-4 rounded-full bg-green-800"></span>
+            <span>Core Expertise</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="block h-4 w-4 rounded-full bg-green-400/60"></span>
+            <span>Confident</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="block h-4 w-4 rounded-full bg-yellow-300/40"></span>
+            <span>Intermediate</span>
+          </div>
+        </div>
+      </div>
+      {/* projects-section */}
+      <div className="p-3 md:py-10 md:px-24 bg-slate-900">
+        <SectionTitle title="Projects" />
+        <div className="flex flex-col mt-6 items-center gap-6">
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              title={project.title}
+              description={project.description}
+              img={project.img}
+              link={project.link}
+              tags={project.tags}
+            />
+          ))}
+        </div>
+      </div>
+      {/* experience-section */}
+      <div className="p-3 md:py-10 md:px-24 bg-slate-950">
+        <SectionTitle title="Experience" />
+        <div className="mt-6 w-fit mx-auto flex flex-col gap-6">
+          {experiences.map((experience, index) => (
+            <ExperienceCard
+              key={index}
+              companyLogo={experience.companyLogo}
+              companyName={experience.companyName}
+              role={experience.role}
+              startDate={experience.startDate}
+              endDate={experience.endDate}
+              points={experience.points}
+            />
+          ))}
+        </div>
+        <div className="mt-6 mx-auto max-w-[700px]">
+          <h3 className="text-xl font-semibold">Note:</h3>
+          <ul className="mt-4 list-disc">
+            <li>
+              <span>
+                I also have <b>7 month experience</b> collaborating on freelance
+                projects on
+              </span>
+              <Image
+                src="/techIcons/Flutter.png"
+                alt="flutter.png"
+                width={24}
+                height={24}
+                className="mx-2 inline"
+              />
+              <b className="">Flutter.</b>
+            </li>
+            <li>
+              I was primarily making UI for apps and firebase connectivity
+            </li>
+            <li>I was learning and working under supervision of a friend</li>
+            <li>
+              (Since it was freelance and informal work, I&apos;m not writing it
+              as experience)
+            </li>
+          </ul>
+        </div>
+      </div>
+      {/* Qualification-section */}
+      <div className="p-3 md:py-10 md:px-24 bg-slate-900">
+        <SectionTitle title="Qualification" />
+        <div className="mt-6 max-w-[1000px] mx-auto">
+          <div className=" p-6 rounded-md bg-slate-700 flex justify-between shadow-2xl text-gray-300 text-center">
+            <span className="flex-1">University Name</span>
+            <span className="flex-1">Course</span>
+            <span className="flex-1">CGPA</span>
+            <span className="flex-1">Passing Year</span>
+          </div>
+
+          {qualifications.map((qualification, index) => (
+            <QualificationsCard
+              key={index}
+              collageName={qualification.collageName}
+              courseName={qualification.courseName}
+              CGPA={qualification.CGPA}
+              passingYear={qualification.passingYear}
+            />
+          ))}
+        </div>
+      </div>
+      {/* Mindset and Values-section */}
+      <div className="h-[500px] p-3 md:py-10 md:px-24 bg-slate-950">
+        <SectionTitle title="Mindset" />
+      </div>
+      {/* contact me section */}
+      <div className="h-[500px] p-3 md:py-10 md:px-24 bg-slate-900">
+        <SectionTitle title="Get in touch" />
+        <div className="mx-auto mt-6 max-w-[500px] text-center">
+          <h3 className="text-lg sm:text-xl">
+            Feel free to reach out to me if you are looking for a developer,
+            have a query, or simply want to connect.
+          </h3>
+          <h1 className="mt-6 flex gap-4 justify-center items-center text-xl sm:text-3xl">
+            <MdOutlineEmail />
+            <span>jaydeepramanuj.jd@gmail.com</span>
+          </h1>
+          <h1 className="mt-4 flex gap-4 justify-center items-center text-xl sm:text-3xl ">
+            <IoCallOutline />
+            <span>+91 9510134230</span>
+          </h1>
+          <div className="mt-10">
+            <h4>You may also find me on these platforms!</h4>
+            <div className="flex w-fit mx-auto mt-4 gap-6">
+              <a
+                href=""
+                className="block w-fit  p-1.5 rounded hover:bg-white/10 text-xl"
+              >
+                <FiGithub />
+              </a>
+              <a
+                href=""
+                className="block w-fit p-1.5 rounded hover:bg-white/10 text-xl"
+              >
+                <SlSocialLinkedin />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
