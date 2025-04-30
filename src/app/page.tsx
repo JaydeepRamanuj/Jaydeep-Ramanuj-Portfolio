@@ -105,7 +105,8 @@ export default function Home() {
               title={project.title}
               description={project.description}
               img={project.img}
-              link={project.link}
+              githubLink={project.githubLink}
+              liveLink={project.liveLink}
               tags={project.tags}
             />
           ))}

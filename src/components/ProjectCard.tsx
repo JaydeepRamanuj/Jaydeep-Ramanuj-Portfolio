@@ -1,12 +1,13 @@
 import Image from "next/image";
-import { LuExternalLink } from "react-icons/lu";
+import ExternalLink from "./ExternalLink";
 
 type ProjectCardType = {
   title: string;
   description: string;
-  img: string;
+  img?: string;
   tags: Array<string>;
-  link: string;
+  githubLink: string;
+  liveLink?: string;
 };
 
 const ProjectCard = ({
@@ -14,18 +15,21 @@ const ProjectCard = ({
   description,
   img,
   tags,
-  link,
+  githubLink,
+  liveLink,
 }: ProjectCardType) => {
   return (
     <div className="bg-gray-800 rounded-xl shadow-lg flex flex-col md:flex-row items-center overflow-hidden max-w-[1000px] p-2 md:p-6">
-      <div className="w-full md:w-1/2 relative h-72 p-8">
-        <Image
-          src={img}
-          alt={title}
-          fill
-          className="object-cover rounded hover:scale-[1.03] transition-all duration-500"
-        />
-      </div>
+      {img && (
+        <div className="w-full md:w-1/2 relative h-72 p-8">
+          <Image
+            src={img}
+            alt={title}
+            fill
+            className="object-cover rounded hover:scale-[1.03] transition-all duration-500"
+          />
+        </div>
+      )}
 
       <div className="p-3 md:p-8 text-white flex-1">
         <h2 className="text-2xl font-bold mb-4">{title}</h2>
@@ -40,12 +44,10 @@ const ProjectCard = ({
             </span>
           ))}
         </div>
-        <a
-          href={link}
-          className="block w-fit mt-6  bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-md focus:outline-none focus:shadow-outline px-4 py-2"
-        >
-          <LuExternalLink />
-        </a>
+        <div className="flex items-center gap-6">
+          {liveLink && <ExternalLink title="Live" link={liveLink} />}
+          <ExternalLink title="Github" link={githubLink} />
+        </div>
       </div>
     </div>
   );

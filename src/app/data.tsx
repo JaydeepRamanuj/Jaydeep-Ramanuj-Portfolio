@@ -87,8 +87,9 @@ export const sideBarMenu: Array<SideBarMenuType> = [
 export type ProjectsType = {
   title: string;
   description: string;
-  img: string;
-  link: string;
+  img?: string;
+  liveLink?: string;
+  githubLink: string;
   tags: Array<string>;
 };
 
@@ -97,8 +98,9 @@ export const projects: Array<ProjectsType> = [
     title: "E-commerce app",
     description:
       "A full-featured online shopping platform built with Next.js, Firebase, Redux, and Clerk for authentication. Users can browse products by categories, add/update/remove items from cart, manage wishlist, and view detailed product pages with an Amazon-style UI. Authentication is handled via Clerk, allowing easy login and registration.",
-    img: "/project.webp",
-    link: "https://www.youtube.com/",
+    img: "/e-commerce-app.png",
+    liveLink: "",
+    githubLink: "https://github.com/JaydeepRamanuj/e-commerce-app",
     tags: ["Next.js", "Firebase", "Clerk", "Redux", "TailwindCSS"],
   },
 
@@ -106,34 +108,38 @@ export const projects: Array<ProjectsType> = [
     title: "Youtube Clone",
     description:
       "This YouTube Clone is built with React.js, Tailwind CSS, Context API, and the YouTube V3 API via RapidAPI. It features a Home Page for trending videos, a Search Results Page with real-time querying, a Video Page for watching content with related suggestions, and a Channel Page displaying creator info and their uploads.",
-    img: "/project.webp",
-    link: "https://www.youtube.com/",
+    img: "/youtube-clone.png",
+    liveLink: "https://youtube-clone-jd.netlify.app/",
+    githubLink: "https://github.com/JaydeepRamanuj/youtube-clone",
     tags: ["React.js", "YouTube v3 API", "ContextAPI", "TailwindCSS"],
   },
   {
     title: "Admin Dashboard",
     description:
       "A platform for comparing and finding affordable flights, as well as booking and purchasing tickets safely and easily in a few simple clicks.",
-    img: "/project.webp",
-    link: "https://www.youtube.com/",
+    img: "/admin-dashboard.png",
+    liveLink: "https://admin-dashboard-jd.netlify.app/",
+    githubLink: "https://github.com/JaydeepRamanuj/admin-dashboard",
     tags: ["React.js", "Recharts", "ContextAPI", "TailwindCSS"],
   },
 
   {
     title: "Flex Visulizer",
     description:
-      "An interactive tool built with React.js, Shadcn/UI, and Context API that helps users learn and experiment with Flexbox visually. Users can dynamically apply Flexbox properties via dropdowns and instantly see how the layout behaves in real time. This project is a React-based upgrade of an earlier Vanilla JS version, aiming to make learning Flexbox intuitive and hands-on.",
+      "An interactive flexbox tool built using React.js, Shadcn/UI, and Context API which helps users learn and experiment with Flexbox visually. Users can  apply Flexbox properties using dropdowns and see how the layout behaves in real time. This project is a React-based upgrade of an earlier Vanilla JS version, aiming to make learning Flexbox easy and interesting",
     img: "/flex-visulizer.png",
-    link: "https://flexvisualizer.netlify.app/",
+    liveLink: "https://flexvisualizer.netlify.app/",
+    githubLink: "https://github.com/JaydeepRamanuj/flex-visulizer",
     tags: ["React.js", "Shadcn", "ContextAPI"],
   },
 
   {
     title: "Mini Projects",
     description:
-      "This project is collection of few useful and reusable features of websites.",
-    img: "/project.webp",
-    link: "https://www.youtube.com/",
+      "This project is a collection of small React.js projects/ features. It was an effort to practice and preserve reusable components / features.",
+    img: "/mini-react-projects.png",
+    liveLink: "https://mini-react-projects-jd.netlify.app/",
+    githubLink: "https://github.com/JaydeepRamanuj/mini-react-projects",
     tags: ["React.js"],
   },
   {
@@ -141,7 +147,8 @@ export const projects: Array<ProjectsType> = [
     description:
       "A platform for comparing and finding affordable flights, as well as booking and purchasing tickets safely and easily in a few simple clicks.",
     img: "/project.webp",
-    link: "https://www.youtube.com/",
+    liveLink: "",
+    githubLink: "https://github.com/JaydeepRamanuj/Jaydeep-Ramanuj-Portfolio",
     tags: ["Next.js", "TypeScript", "TailwindCSS"],
   },
 ];
