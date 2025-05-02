@@ -35,7 +35,7 @@ export default function Home() {
           </h1>
           <div className="flex mt-6 gap-6">
             <a
-              href=""
+              href="https://github.com/JaydeepRamanuj"
               className="block w-fit  p-1.5 rounded hover:bg-white/10 text-xl"
             >
               <FiGithub />
@@ -45,6 +45,12 @@ export default function Home() {
               className="block w-fit p-1.5 rounded hover:bg-white/10 text-xl"
             >
               <SlSocialLinkedin />
+            </a>
+            <a
+              href="mailto:jaydeepramanuj.jd@gmail.com"
+              className="block w-fit p-1.5 rounded hover:bg-white/10 text-xl"
+            >
+              <MdOutlineEmail />
             </a>
           </div>
           <button className="mt-6 px-4 py-1.5 rounded-full bg-slate-500/40 cursor-pointer hover:bg-slate-500/60 active:scale-95">
@@ -202,7 +208,7 @@ export default function Home() {
             <h4>You may also find me on these platforms!</h4>
             <div className="flex w-fit mx-auto mt-4 gap-6">
               <a
-                href=""
+                href="https://github.com/JaydeepRamanuj"
                 className="block w-fit  p-1.5 rounded hover:bg-white/10 text-xl"
               >
                 <FiGithub />

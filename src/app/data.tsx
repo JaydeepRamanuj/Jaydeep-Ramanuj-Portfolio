@@ -99,7 +99,7 @@ export const projects: Array<ProjectsType> = [
     description:
       "A full-featured online shopping platform built with Next.js, Firebase, Redux, and Clerk for authentication. Users can browse products by categories, add/update/remove items from cart, manage wishlist, and view detailed product pages with an Amazon-style UI. Authentication is handled via Clerk, allowing easy login and registration.",
     img: "/e-commerce-app.png",
-    liveLink: "",
+    liveLink: "https://e-commerce-app-jaydeep-ramanujs-projects.vercel.app/",
     githubLink: "https://github.com/JaydeepRamanuj/e-commerce-app",
     tags: ["Next.js", "Firebase", "Clerk", "Redux", "TailwindCSS"],
   },
