@@ -1,7 +1,13 @@
+"use client";
 import { navItems } from "@/app/data";
 import Link from "next/link";
+import { useState } from "react";
+import { IoMenu } from "react-icons/io5";
+import SideBar from "./SideBar";
 
 const Navbar = () => {
+  const [isSideBarVisible, setSideBar] = useState(false);
+
   return (
     <nav className="fixed w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,8 +33,17 @@ const Navbar = () => {
               ))}
             </div>
           </div>
+          <div
+            className="p-1 bg-slate-500/20 rounded-md cursor-pointer active:scale-95"
+            onClick={() => {
+              setSideBar(() => !isSideBarVisible);
+            }}
+          >
+            <IoMenu className="text-2xl" />
+          </div>
         </div>
       </div>
+      <SideBar isSideBarVisible={isSideBarVisible} setSideBar={setSideBar} />
     </nav>
   );
 };

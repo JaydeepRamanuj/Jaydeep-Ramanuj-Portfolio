@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <div>
       {/* hero-section */}
-      <div className="bg-slate-950 flex justify-center flex-wrap-reverse items-center gap-24 pt-44 pb-32">
+      <div className="bg-slate-950 flex justify-center flex-wrap-reverse items-center gap-6 md:gap-24 pt-28 pb-4 md:pt-44 md:pb-32">
         <div className="info max-w-[600px] p-3">
           <h1 className="text-4xl font-bold">
             Namaste, <br /> I&apos;m Jaydeep Ramanuj 👋
@@ -58,7 +58,7 @@ export default function Home() {
           </button>
         </div>
         <div>
-          <div className="h-[300px] w-[250px] rounded relative isolate after:w-full after:h-full after:bg-slate-500/40 after:rounded after:absolute after:top-10 after:left-10 after:-z-10">
+          <div className="h-[200px] md:h-[300px] w-[150px] md:w-[250px] rounded relative isolate after:w-full after:h-full after:bg-slate-500/40 after:rounded after:absolute after:top-4 after:left-4 md:after:top-10  md:after:left-10 after:-z-10">
             <img
               src="/me.jpeg"
               alt="hero-image.jpg"
@@ -75,7 +75,7 @@ export default function Home() {
       {/* skills-section */}
       <div className="p-3 md:py-10 md:px-24 bg-slate-950">
         <SectionTitle title="Skills" />
-        <div className="mt-10 flex flex-wrap md:flex-nowrap gap-3 justify-evenly">
+        <div className="mt-4 md:mt-10 flex flex-wrap md:flex-nowrap gap-3 justify-evenly">
           <SkillsSection
             title="Primary (FrontEnd) Skills"
             data={PrimarySkills}
@@ -186,9 +186,9 @@ export default function Home() {
         </div>
       </div>
       {/* Mindset and Values-section */}
-      <div className=" p-3 md:py-10 md:px-24 bg-slate-950">
+      <div className=" p-3 md:py-10 lg:px-24 bg-slate-950">
         <SectionTitle title="Mindset" />
-        <div className="w-1/2 mx-auto text-gray-200 text-justify mt-6">
+        <div className="w-full lg:w-1/2 mx-auto text-gray-200 text-start md:text-justify mt-6">
           <p>
             I want to bridge the gap between <b>coding</b> and
             <strong> programming</strong>, because being a programmer means more
@@ -209,7 +209,7 @@ export default function Home() {
           <hr className="border-gray-600 my-3" />
           <details className="mt-2 text-gray-300">
             <summary>Unedited version</summary>
-            <p>
+            <p className="mt-3">
               I want to bridge the gap between coding and programming, as
               programmer would has to do more than just write code. I want my
               skills to deliver real values and solve real world problems. Even
@@ -233,7 +233,7 @@ export default function Home() {
         </div>
       </div>
       {/* contact me section */}
-      <div className="h-[500px] p-3 md:py-10 md:px-24 bg-slate-900">
+      <div className="p-3 md:py-10 md:px-24 bg-slate-900">
         <SectionTitle title="Get in touch" />
         <div className="mx-auto mt-6 max-w-[500px] text-center">
           <h3 className="text-lg sm:text-xl">

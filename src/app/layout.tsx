@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-white `}>
+      <body className={`${inter.className} bg-white relative`}>
         <Providers>
           <Navbar />
           <main className="min-h-screen">{children}</main>

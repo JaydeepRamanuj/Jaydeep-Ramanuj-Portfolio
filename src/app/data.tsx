@@ -192,8 +192,9 @@ export const experiences: Array<ExperienceCardType> = [
     startDate: "Nov 2023",
     endDate: "Feb 2025",
     points: [
-      "I trained students for web development and Software engineering",
-      "I taught languages and tools like HTML, CSS, Bootstrap, Tailwind, JavaScript, jQuery, Wordpress, Shopify, C, C++, DBMS(MYSQL), Git, Github",
+      "Conducted hands-on training for 70+ students in Web Designing using HTML5, CSS3, Bootstrap, Tailwind, JavaScript, jQuery, SASS/LESS, WordPress/Shopify and foundational programming with C, C++, and database basics using MySQL.",
+      "Mentored students through real-world projects, focusing on UI design, responsive layouts and debugging.",
+      "Delivered technical seminars and presentations to introduce web technologies and IT field to new students, showcasing strong communication and presentation skills. ",
     ],
   },
 ];
