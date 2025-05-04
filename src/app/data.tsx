@@ -5,10 +5,11 @@ import { GiOvermind } from "react-icons/gi";
 import { IoHome } from "react-icons/io5";
 
 export const navItems = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "#about" },
+  { name: "Home", href: "#home" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
+  { name: "Experience", href: "#experience" },
+  { name: "Qualification", href: "#qualification" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -146,7 +147,7 @@ export const projects: Array<ProjectsType> = [
     title: "Personal Portfolio",
     description:
       "A platform for comparing and finding affordable flights, as well as booking and purchasing tickets safely and easily in a few simple clicks.",
-    img: "/project.webp",
+    img: "/portfolio.png",
     liveLink: "",
     githubLink: "https://github.com/JaydeepRamanuj/Jaydeep-Ramanuj-Portfolio",
     tags: ["Next.js", "TypeScript", "TailwindCSS"],

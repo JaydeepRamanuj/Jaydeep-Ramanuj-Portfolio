@@ -21,6 +21,9 @@ function SideBar({ isSideBarVisible, setSideBar }: SideBarType) {
           key={item.name}
           href={item.href}
           className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md font-medium text-lg"
+          onClick={() => {
+            setSideBar(() => !isSideBarVisible);
+          }}
         >
           {item.name}
         </a>

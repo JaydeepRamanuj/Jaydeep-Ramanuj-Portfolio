@@ -21,11 +21,16 @@ export default function Home() {
   return (
     <div>
       {/* hero-section */}
-      <div className="bg-slate-950 flex justify-center flex-wrap-reverse items-center gap-6 md:gap-24 pt-28 pb-4 md:pt-44 md:pb-32">
+      <div
+        className="bg-slate-950 flex justify-center flex-wrap-reverse items-center gap-6 md:gap-24 pt-28 pb-4 md:pt-44 md:pb-32"
+        id="home"
+      >
         <div className="info max-w-[600px] p-3">
-          <h1 className="text-4xl font-bold">
-            Namaste, <br /> I&apos;m Jaydeep Ramanuj 👋
-          </h1>
+          <a href="#home">
+            <h1 className="text-4xl font-bold">
+              Namaste, <br /> I&apos;m Jaydeep Ramanuj 👋
+            </h1>
+          </a>
           <h1 className="mt-6">
             I’m a frontend developer skilled in React and Next.js, aiming to
             build fast, scalable, and responsive web applications that deliver
@@ -41,7 +46,7 @@ export default function Home() {
               <FiGithub />
             </a>
             <a
-              href=""
+              href="https://linkedin.com/in/jaydeep-ramanuj"
               className="block w-fit p-1.5 rounded hover:bg-white/10 text-xl"
             >
               <SlSocialLinkedin />
@@ -73,7 +78,7 @@ export default function Home() {
         <div></div>
       </div> */}
       {/* skills-section */}
-      <div className="p-3 md:py-10 md:px-24 bg-slate-950">
+      <div className="p-3 md:py-10 md:px-24 bg-slate-950" id="skills">
         <SectionTitle title="Skills" />
         <div className="mt-4 md:mt-10 flex flex-wrap md:flex-nowrap gap-3 justify-evenly">
           <SkillsSection
@@ -102,7 +107,7 @@ export default function Home() {
         </div>
       </div>
       {/* projects-section */}
-      <div className="p-3 md:py-10 md:px-24 bg-slate-900">
+      <div className="p-3 md:py-10 md:px-24 bg-slate-900" id="projects">
         <SectionTitle title="Projects" />
         <div className="flex flex-col mt-6 items-center gap-6">
           {projects.map((project, index) => (
@@ -119,7 +124,7 @@ export default function Home() {
         </div>
       </div>
       {/* experience-section */}
-      <div className="p-3 md:py-10 md:px-24 bg-slate-950">
+      <div className="p-3 md:py-10 md:px-24 bg-slate-950" id="experience">
         <SectionTitle title="Experience" />
         <div className="mt-6 w-fit mx-auto flex flex-col gap-6">
           {experiences.map((experience, index) => (
@@ -164,7 +169,7 @@ export default function Home() {
         </div>
       </div>
       {/* Qualification-section */}
-      <div className="p-3 md:py-10 md:px-24 bg-slate-900">
+      <div className="p-3 md:py-10 md:px-24 bg-slate-900" id="qualification">
         <SectionTitle title="Qualification" />
         <div className="mt-6 max-w-[1000px] mx-auto">
           <div className=" p-6 rounded-md bg-slate-700 flex justify-between shadow-2xl text-gray-300 text-center">
@@ -233,7 +238,7 @@ export default function Home() {
         </div>
       </div>
       {/* contact me section */}
-      <div className="p-3 md:py-10 md:px-24 bg-slate-900">
+      <div className="p-3 md:py-10 md:px-24 bg-slate-900" id="contact">
         <SectionTitle title="Get in touch" />
         <div className="mx-auto mt-6 max-w-[500px] text-center">
           <h3 className="text-lg sm:text-xl">
@@ -258,7 +263,7 @@ export default function Home() {
                 <FiGithub />
               </a>
               <a
-                href=""
+                href="https://linkedin.com/in/jaydeep-ramanuj"
                 className="block w-fit p-1.5 rounded hover:bg-white/10 text-xl"
               >
                 <SlSocialLinkedin />

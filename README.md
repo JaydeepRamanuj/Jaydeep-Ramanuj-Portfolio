@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💼 Portfolio
 
-## Getting Started
+Hi I am **Jaydeep Ramanuj**, Welcome to my personal portfolio website built with **Next.js** and **TypeScript**. This platform showcases who I am, the skills I’ve developed, and the projects I’ve built along my journey to becoming a good frontend developer with full-stack and system-level depth.
 
-First, run the development server:
+## 🚀 Projects
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Here are some of the featured projects from my portfolio:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 📚 React Course Management Platform
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+An educational platform that allows admins to add, update, and manage courses, while students can enroll and track their learning progress.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🔗 [Live Demo](https://react-course-mgmt.vercel.app)
 
-## Learn More
+### 📝 Blog App with Clerk & Firebase
 
-To learn more about Next.js, take a look at the following resources:
+Authentication-integrated blog system where users can write, update, and publish articles. Built using Clerk for auth and Firebase for storage.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🔗 [Live Site](https://clerk-firebase-blog.vercel.app)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 📦 Full-Stack Productivity App (Coming Soon)
 
-## Deploy on Vercel
+A productivity dashboard with task tracking, timer, and analytics. Designed with Next.js (App Router), TypeScript, MongoDB, and Tailwind CSS.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠 Tech Stack
+
+This portfolio is built using:
+
+- **Frontend:** Next.js 13+, TypeScript, Tailwind CSS, Framer Motion, React Icons
+- **Authentication:** Clerk (for future auth-based features)
+- **Deployment:** Vercel
+- **Tooling:** ESLint, Prettier, Git
+
+I follow modern frontend best practices, with a clean UI and a focus on performance, SEO, and accessibility.
+
+---
+
+## 🧠 Skills Highlight
+
+- **Frontend:** HTML5, CSS3, JavaScript, React.js, Next.js, Tailwind CSS, Bootstrap
+- **Backend (Growing):** Node.js, Express.js, MongoDB, REST APIs
+- **Others:** Git, Linux, WordPress, Python, SQL, Dart, C, C++
+- **Currently Learning:** TypeScript, GraphQL, Redis, PostgreSQL, Nginx, Go
+- **Practicing:** DSA (via LeetCode), System Design Basics
+
+---
+
+## 📫 Contact Me
+
+Want to collaborate or chat? Reach out:
+
+- 📧 Email: <aryandev.contact@gmail.com>
+- 🌐 Portfolio: [aryan.dev](https://aryan.dev)
+- 💼 LinkedIn: [linkedin.com/in/aryandev](https://linkedin.com/in/aryandev)
+
+---
+
+## 🙌 Acknowledgements
+
+Thanks to the open-source community and creators who have contributed tools, templates, and tutorials that helped me level up my development journey.
+
+---
+
+> _“Discipline equals freedom.”_ – Jocko Willink  
+> I’m all in. Let’s build something amazing.

@@ -17,7 +17,7 @@ const Navbar = () => {
               href="/"
               className="text-xl font-bold text-gray-900 dark:text-white"
             >
-              Your Name
+              Jaydeep Ramanuj
             </Link>
           </div>
           <div className="hidden md:block">
@@ -34,7 +34,7 @@ const Navbar = () => {
             </div>
           </div>
           <div
-            className="p-1 bg-slate-500/20 rounded-md cursor-pointer active:scale-95"
+            className="p-1 bg-slate-500/20 rounded-md cursor-pointer active:scale-95 md:hidden"
             onClick={() => {
               setSideBar(() => !isSideBarVisible);
             }}
