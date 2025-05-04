@@ -29,8 +29,8 @@ export default function Home() {
           <h1 className="mt-6">
             I’m a frontend developer skilled in React and Next.js, aiming to
             build fast, scalable, and responsive web applications that deliver
-            real value. With a year of teaching experience and freelance work, I
-            blend technical ability with strong communication. I aim to build
+            real value. With 1 year and 4 months of teaching experience, I blend
+            technical ability with strong communication. I aim to build
             real-world solutions and grow both as a developer and as a person.
           </h1>
           <div className="flex mt-6 gap-6">
@@ -60,7 +60,7 @@ export default function Home() {
         <div>
           <div className="h-[300px] w-[250px] rounded relative isolate after:w-full after:h-full after:bg-slate-500/40 after:rounded after:absolute after:top-10 after:left-10 after:-z-10">
             <img
-              src="/hero-image.jpg"
+              src="/me.jpeg"
               alt="hero-image.jpg"
               className="w-full h-full object-cover rounded z-10 border-8 border-black"
             />
@@ -68,10 +68,10 @@ export default function Home() {
         </div>
       </div>
       {/* about-section */}
-      <div className=" p-3 md:py-10 md:px-24 bg-slate-900">
+      {/* <div className=" p-3 md:py-10 md:px-24 bg-slate-900">
         <SectionTitle title="About me" />
         <div></div>
-      </div>
+      </div> */}
       {/* skills-section */}
       <div className="p-3 md:py-10 md:px-24 bg-slate-950">
         <SectionTitle title="Skills" />
@@ -152,7 +152,8 @@ export default function Home() {
               <b className="">Flutter.</b>
             </li>
             <li>
-              I was primarily making UI for apps and firebase connectivity
+              I primarily developed UI components for apps, occasionally
+              contributing to core logic as well.
             </li>
             <li>I was learning and working under supervision of a friend</li>
             <li>
@@ -185,8 +186,51 @@ export default function Home() {
         </div>
       </div>
       {/* Mindset and Values-section */}
-      <div className="h-[500px] p-3 md:py-10 md:px-24 bg-slate-950">
+      <div className=" p-3 md:py-10 md:px-24 bg-slate-950">
         <SectionTitle title="Mindset" />
+        <div className="w-1/2 mx-auto text-gray-200 text-justify mt-6">
+          <p>
+            I want to bridge the gap between <b>coding</b> and
+            <strong> programming</strong>, because being a programmer means more
+            than just writing code — it’s about solving real problems and
+            delivering real value. While I’m eager to explore new technologies,
+            I also respect and rely on battle-tested tools that ensure
+            reliability, performance, and long-term maintainability.
+          </p>
+          <p className="mt-3">
+            Though I’m focused on self-growth, I deeply understand the
+            importance of aligning with a company’s environment and
+            expectations. I’m committed to acquiring the skills and mindset
+            needed to contribute meaningfully to both the company’s goals and my
+            own evolution. When we work together, we grow together — and that’s
+            the kind of journey I want to be part of.
+          </p>
+
+          <hr className="border-gray-600 my-3" />
+          <details className="mt-2 text-gray-300">
+            <summary>Unedited version</summary>
+            <p>
+              I want to bridge the gap between coding and programming, as
+              programmer would has to do more than just write code. I want my
+              skills to deliver real values and solve real world problems. Even
+              though I want to learn new tech, I want to respect and use battle
+              tested techs that ensures reliability.
+            </p>
+            <p className="mt-3">
+              While I’m focused on self growth, I’m equally aware of company
+              environment and its expectations. I want to acquire skills and
+              work hard to contribute to growth of my employer and myself
+              because when we work together, we grow together.
+            </p>
+
+            <p className="mt-2">
+              <b>
+                [I use AI tools like ChatGPT to refine my writings, my readme
+                and summaries to increase effectiveness]
+              </b>
+            </p>
+          </details>
+        </div>
       </div>
       {/* contact me section */}
       <div className="h-[500px] p-3 md:py-10 md:px-24 bg-slate-900">
