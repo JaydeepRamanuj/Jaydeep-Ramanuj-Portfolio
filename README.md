@@ -1,8 +1,13 @@
 # 💼 Portfolio
 
-Hi I am **Jaydeep Ramanuj**, Welcome to my personal portfolio website built with **Next.js** and **TypeScript**. This platform showcases who I am, the skills I’ve developed, and the projects I’ve built along my journey to becoming a good frontend developer with full-stack and system-level depth.
+Hi I am **Jaydeep Ramanuj**, Welcome to my personal portfolio website built with **Next.js** and **TypeScript**. This platform showcases who I am, the skills I’ve developed, and the projects I’ve built along my journey to becoming a good frontend developer. This stays a little to be authentic.
 
-## 🚀 Projects
+## 🚀 Skills
+
+- **Primary skills :** React.js, Next.js, JavaScript, Tailwind CSS, TypeScript, HTML, CSS, Bootstrap and Tailwind
+- **Additional Skills :** Git/Github, Redux, Firebase, Node.js, Express.js, MongoDB, Postman
+- **Deployment:** Vercel
+- **Tooling:** ESLint, Prettier, Git
 
 Here are some of the featured projects from my portfolio:
 

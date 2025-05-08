@@ -19,7 +19,7 @@ const ProjectCard = ({
   liveLink,
 }: ProjectCardType) => {
   return (
-    <div className="bg-gray-800 rounded-xl shadow-lg flex flex-col md:flex-row items-center overflow-hidden max-w-[1000px] p-2 md:p-6">
+    <div className="bg-gray-800 rounded-xl shadow-lg flex flex-col md:flex-row items-center overflow-hidden max-w-[1000px] p-2 md:p-6 hover:scale-[1.015] transition-all hover:shadow-2xl">
       {img && (
         <div className="w-full md:w-1/2 relative h-72 p-8">
           <Image

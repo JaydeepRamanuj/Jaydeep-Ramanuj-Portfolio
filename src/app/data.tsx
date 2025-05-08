@@ -144,9 +144,18 @@ export const projects: Array<ProjectsType> = [
     tags: ["React.js"],
   },
   {
+    title: "Frontend step stones",
+    description:
+      "A curated collection of 25 mini web projects built using HTML, CSS, Vanilla JavaScript, and Tailwind CSS. This project showcases my journey through frontend development by exploring interactive UI elements, utilities, and visual experiments. Users can preview, explore, and edit each project via CodePen. Built with the purpose of hands-on learning, creativity, and continuous improvement.",
+    img: "/frontend-step-stones.png",
+    liveLink: "https://frontend-step-stones.vercel.app/",
+    githubLink: "https://github.com/JaydeepRamanuj/frontend-step-stones",
+    tags: ["HTML", "CSS", "Vanila JS", "TailwindCSS"],
+  },
+  {
     title: "Personal Portfolio",
     description:
-      "A platform for comparing and finding affordable flights, as well as booking and purchasing tickets safely and easily in a few simple clicks.",
+      "A website to know little more about Me, my Projects and Skills. It shows both my technical side as well as mindset. Look for explored skills too, it holds some good gems.",
     img: "/portfolio.png",
     liveLink: "",
     githubLink: "https://github.com/JaydeepRamanuj/Jaydeep-Ramanuj-Portfolio",

@@ -16,6 +16,7 @@ import { SlSocialLinkedin } from "react-icons/sl";
 import ExperienceCard from "@/components/ExperienceCard";
 import Image from "next/image";
 import QualificationsCard from "@/components/QualificationsCard";
+import { FaCodepen } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -50,6 +51,12 @@ export default function Home() {
               className="block w-fit p-1.5 rounded hover:bg-white/10 text-xl"
             >
               <SlSocialLinkedin />
+            </a>
+            <a
+              href="https://codepen.io/jd-coding-03"
+              className="block w-fit p-1.5 rounded hover:bg-white/10 text-xl"
+            >
+              <FaCodepen />
             </a>
             <a
               href="mailto:jaydeepramanuj.jd@gmail.com"
@@ -93,11 +100,11 @@ export default function Home() {
         </div>
         <div className="w-fit mx-auto mt-6 flex flex-col sm:flex-row  bg-white/10 rounded-md sm:rounded-full  px-3 py-1 gap-6 ">
           <div className="flex items-center gap-2">
-            <span className="block h-4 w-4 rounded-full bg-green-800"></span>
+            <span className="block h-4 w-4 rounded-full bg-green-400/60"></span>
             <span>Core Expertise</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="block h-4 w-4 rounded-full bg-green-400/60"></span>
+            <span className="block h-4 w-4 rounded-full bg-green-600/60"></span>
             <span>Confident</span>
           </div>
           <div className="flex items-center gap-2">
@@ -227,14 +234,70 @@ export default function Home() {
               work hard to contribute to growth of my employer and myself
               because when we work together, we grow together.
             </p>
-
-            <p className="mt-2">
-              <b>
-                [I use AI tools like ChatGPT to refine my writings, my readme
-                and summaries to increase effectiveness]
-              </b>
-            </p>
           </details>
+          <div>
+            <h4 className="text-xl font-semibold mt-6">Note on AI Usage</h4>
+            <p className="mt-3">
+              I actively explore AI tools like ChatGPT to deepen my
+              understanding of concepts, taking notes, debug tricky issues, and
+              improve my communication — especially for writing better README
+              files and summaries.
+              <strong className="mx-2">
+                However, all code across my portfolio and GitHub is handwritten
+                by me as part of my learning process.
+              </strong>
+              I believe in using AI as a supportive tool, not a replacement for
+              fundamental skills.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold mt-6">
+              My Roadmap for the Next 12–15 Months
+            </h3>
+            <p className="text-gray-200 mt-2">
+              I believe being a developer means continuously evolving. My goal
+              for the upcoming year is to solidify my core frontend skills
+              (especially React and Next.js), then gradually expand into
+              supporting libraries, testing practices, and backend technologies
+              — ultimately growing into a well-rounded, industry-ready engineer.
+            </p>
+
+            <ol className="list-decimal list-inside text-gray-300 mt-3 space-y-1">
+              <li>
+                Strengthen fundamentals of
+                <b className="mx-1">React, Next.js, and TypeScript</b> to match
+                modern development standards and best practices
+              </li>
+              <li>
+                Learn/practice essential frontend tools like
+                <b className="mx-1">
+                  Jest, React Testing Library, shadcn/ui, MUI, Formik, Storybook
+                  and many more useful libraries
+                </b>
+              </li>
+              <li>
+                Familiarize myself with common dev workflows and collaboration
+                tools like <b>Slack</b>, <b>Asana</b>, and project versioning
+                practices
+              </li>
+              <li>
+                Strengthen soft skills including
+                <b>communication, team collaboration, and problem-solving</b>
+              </li>
+              <li>
+                Explore modern backend technologies such as
+                <b>GraphQL, PostgreSQL, and Redis</b> to enhance frontend
+                expertise
+              </li>
+            </ol>
+
+            <p className="mt-4 text-gray-400 italic">
+              I'm not trying to learn everything at once — just taking
+              consistent, focused steps to grow as a developer and bring more
+              value to the teams I work with.
+            </p>
+          </div>
         </div>
       </div>
       {/* contact me section */}
