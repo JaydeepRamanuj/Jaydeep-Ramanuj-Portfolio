@@ -65,9 +65,13 @@ export default function Home() {
               <MdOutlineEmail />
             </a>
           </div>
-          <button className="mt-6 px-4 py-1.5 rounded-full bg-slate-500/40 cursor-pointer hover:bg-slate-500/60 active:scale-95">
+          <a
+            href="/Resume_Jaydeep_Ramanuj_may_2025.pdf"
+            download="Resume_Jaydeep_Ramanuj_may_2025.pdf"
+            className="block mt-6 w-fit  px-4 py-1.5 rounded-full bg-slate-500/40 cursor-pointer hover:bg-slate-500/60 active:scale-95"
+          >
             Download Resume
-          </button>
+          </a>
         </div>
         <div>
           <div className="h-[200px] md:h-[300px] w-[150px] md:w-[250px] rounded relative isolate after:w-full after:h-full after:bg-slate-500/40 after:rounded after:absolute after:top-4 after:left-4 md:after:top-10  md:after:left-10 after:-z-10">
