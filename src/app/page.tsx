@@ -297,7 +297,7 @@ export default function Home() {
             </ol>
 
             <p className="mt-4 text-gray-400 italic">
-              I'm not trying to learn everything at once — just taking
+              I&apos;m not trying to learn everything at once — just taking
               consistent, focused steps to grow as a developer and bring more
               value to the teams I work with.
             </p>
