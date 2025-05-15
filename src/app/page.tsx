@@ -108,7 +108,7 @@ export default function Home() {
             <span>Core Expertise</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="block h-4 w-4 rounded-full bg-green-600/60"></span>
+            <span className="block h-4 w-4 rounded-full bg-green-300/60"></span>
             <span>Confident</span>
           </div>
           <div className="flex items-center gap-2">

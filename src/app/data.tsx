@@ -37,6 +37,8 @@ export const AdditionalToolsAndLibraries: Array<SkillType> = [
   { name: "Express.js", level: 3, icon: "/techIcons/Express.png" },
   { name: "MongoDB", level: 3, icon: "/techIcons/MongoDB.png" },
   { name: "Firebase", level: 3, icon: "/techIcons/Firebase.png" },
+  { name: "Jest", level: 3, icon: "/techIcons/Jest.png" },
+  { name: "RTL", level: 3, icon: "/techIcons/RTL.png" },
   { name: "Redux", level: 4, icon: "/techIcons/Redux.png" },
   { name: "Recharts", level: 4, icon: "/techIcons/Recharts.png" },
   { name: "Shadcn", level: 3, icon: "/techIcons/Shadcn.png" },
