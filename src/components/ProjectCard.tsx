@@ -8,6 +8,7 @@ type ProjectCardType = {
   tags: Array<string>;
   githubLink: string;
   liveLink?: string;
+  isUnderDevelopment?: boolean;
 };
 
 const ProjectCard = ({
@@ -17,9 +18,14 @@ const ProjectCard = ({
   tags,
   githubLink,
   liveLink,
+  isUnderDevelopment = false,
 }: ProjectCardType) => {
   return (
-    <div className="bg-gray-800 rounded-xl shadow-lg flex flex-col md:flex-row items-center overflow-hidden max-w-[1000px] p-2 md:p-6 hover:scale-[1.015] transition-all hover:shadow-2xl">
+    <div
+      className={`bg-gray-800 rounded-xl shadow-lg flex flex-col md:flex-row items-center overflow-hidden max-w-[1000px] p-2 md:p-6 hover:scale-[1.015] transition-all hover:shadow-2xl relative ${
+        isUnderDevelopment && "border border-orange-400/50"
+      }`}
+    >
       {img && (
         <div className="w-full md:w-1/2 relative h-72 p-8">
           <Image
@@ -49,6 +55,11 @@ const ProjectCard = ({
           <ExternalLink title="Github" link={githubLink} />
         </div>
       </div>
+      {isUnderDevelopment && (
+        <div className="bg-orange-400/50 absolute text-white text-center top-0 left-1/2 -translate-x-1/2 rounded-b-md px-2 py-0.5">
+          This project is under developemnt
+        </div>
+      )}
     </div>
   );
 };

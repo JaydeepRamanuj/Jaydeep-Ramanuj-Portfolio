@@ -24,7 +24,7 @@ export const PrimarySkills: Array<SkillType> = [
   { name: "JavaScript", level: 5, icon: "/techIcons/JavaScript.png" },
   { name: "Next.js", level: 4, icon: "/techIcons/Next.js.png" },
   { name: "Tailwind", level: 5, icon: "/techIcons/TailwindCSS.png" },
-  { name: "TypeScript", level: 3, icon: "/techIcons/TypeScript.png" },
+  { name: "TypeScript", level: 4, icon: "/techIcons/TypeScript.png" },
   { name: "HTML", level: 5, icon: "/techIcons/HTML5.png" },
   { name: "CSS", level: 5, icon: "/techIcons/CSS3.png" },
   { name: "Bootstrap", level: 4, icon: "/techIcons/Bootstrap.png" },
@@ -40,10 +40,12 @@ export const AdditionalToolsAndLibraries: Array<SkillType> = [
   { name: "Jest", level: 3, icon: "/techIcons/Jest.png" },
   { name: "RTL", level: 3, icon: "/techIcons/RTL.png" },
   { name: "Redux", level: 4, icon: "/techIcons/Redux.png" },
+  { name: "Zustand", level: 4, icon: "/techIcons/zustand.png" },
   { name: "Recharts", level: 4, icon: "/techIcons/Recharts.png" },
   { name: "Shadcn", level: 3, icon: "/techIcons/Shadcn.png" },
   { name: "MUI", level: 3, icon: "/techIcons/MaterialUI.png" },
   { name: "Clerk", level: 3, icon: "/techIcons/Clerk.png" },
+  { name: "Framer motion", level: 3, icon: "/techIcons/Framer-motion.png" },
   { name: "Postman", level: 3, icon: "/techIcons/Postman.png" },
 ];
 
@@ -94,6 +96,7 @@ export type ProjectsType = {
   liveLink?: string;
   githubLink: string;
   tags: Array<string>;
+  isUnderDevelopment?: boolean;
 };
 
 export const projects: Array<ProjectsType> = [
@@ -162,6 +165,24 @@ export const projects: Array<ProjectsType> = [
     liveLink: "",
     githubLink: "https://github.com/JaydeepRamanuj/Jaydeep-Ramanuj-Portfolio",
     tags: ["Next.js", "TypeScript", "TailwindCSS"],
+  },
+  {
+    title: "Kanban app",
+    description:
+      "Kanban app is first entry in productivity suite. Currently it supports managing tasks locally and Authentication.",
+    img: "/kanban-app.png",
+    liveLink: "https://kanbanapp-jd.netlify.app/",
+    githubLink:
+      "https://github.com/JaydeepRamanuj/kanban-app-zustand/tree/firebase",
+    tags: [
+      "React.js",
+      "TypeScript",
+      "Firebase",
+      "Zustand",
+      "TailwindCSS",
+      "DND kit",
+    ],
+    isUnderDevelopment: true,
   },
 ];
 

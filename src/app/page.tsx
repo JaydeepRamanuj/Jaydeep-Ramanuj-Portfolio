@@ -130,6 +130,7 @@ export default function Home() {
               githubLink={project.githubLink}
               liveLink={project.liveLink}
               tags={project.tags}
+              isUnderDevelopment={project.isUnderDevelopment}
             />
           ))}
         </div>
