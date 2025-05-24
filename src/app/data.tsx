@@ -150,6 +150,23 @@ export const projects: Array<ProjectsType> = [
     tags: ["React.js"],
   },
   {
+    title: "Kanban app",
+    description:
+      "Kanban app is first entry in productivity suite. Currently it supports managing tasks locally and Authentication.",
+    img: "/kanban-app.png",
+    liveLink: "https://kanbanapp-jd.netlify.app/",
+    githubLink: "https://github.com/JaydeepRamanuj/kanban-app-zustand",
+    tags: [
+      "React.js",
+      "TypeScript",
+      "Firebase",
+      "Zustand",
+      "TailwindCSS",
+      "DND kit",
+    ],
+    isUnderDevelopment: true,
+  },
+  {
     title: "Frontend step stones",
     description:
       "A curated collection of 25 mini web projects built using HTML, CSS, Vanilla JavaScript, and Tailwind CSS. This project showcases my journey through frontend development by exploring interactive UI elements, utilities, and visual experiments. Users can preview, explore, and edit each project via CodePen. Built with the purpose of hands-on learning, creativity, and continuous improvement.",
@@ -166,24 +183,6 @@ export const projects: Array<ProjectsType> = [
     liveLink: "",
     githubLink: "https://github.com/JaydeepRamanuj/Jaydeep-Ramanuj-Portfolio",
     tags: ["Next.js", "TypeScript", "TailwindCSS"],
-  },
-  {
-    title: "Kanban app",
-    description:
-      "Kanban app is first entry in productivity suite. Currently it supports managing tasks locally and Authentication.",
-    img: "/kanban-app.png",
-    liveLink: "https://kanbanapp-jd.netlify.app/",
-    githubLink:
-      "https://github.com/JaydeepRamanuj/kanban-app-zustand/tree/firebase",
-    tags: [
-      "React.js",
-      "TypeScript",
-      "Firebase",
-      "Zustand",
-      "TailwindCSS",
-      "DND kit",
-    ],
-    isUnderDevelopment: true,
   },
 ];
 
