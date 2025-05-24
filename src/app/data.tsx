@@ -46,6 +46,7 @@ export const AdditionalToolsAndLibraries: Array<SkillType> = [
   { name: "MUI", level: 3, icon: "/techIcons/MaterialUI.png" },
   { name: "Clerk", level: 3, icon: "/techIcons/Clerk.png" },
   { name: "Framer motion", level: 3, icon: "/techIcons/Framer-motion.png" },
+  { name: "Formik", level: 3, icon: "/techIcons/Formik.png" },
   { name: "Postman", level: 3, icon: "/techIcons/Postman.png" },
 ];
 
