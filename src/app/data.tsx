@@ -22,7 +22,7 @@ export type SkillType = {
 export const PrimarySkills: Array<SkillType> = [
   { name: "React.js", level: 5, icon: "/techIcons/React.png" },
   { name: "JavaScript", level: 5, icon: "/techIcons/JavaScript.png" },
-  { name: "Next.js", level: 4, icon: "/techIcons/Next.js.png" },
+  { name: "Next.js", level: 3, icon: "/techIcons/Next.js.png" },
   { name: "Tailwind", level: 5, icon: "/techIcons/TailwindCSS.png" },
   { name: "TypeScript", level: 4, icon: "/techIcons/TypeScript.png" },
   { name: "HTML", level: 5, icon: "/techIcons/HTML5.png" },
