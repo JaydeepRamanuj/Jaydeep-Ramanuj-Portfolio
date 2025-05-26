@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "💻 Jaydeep Ramanuj",
   description: "Personal portfolio website showcasing my projects and skills",
   other: {
-    "color-scheme": "light dark",
+    "color-scheme": "dark",
   },
 };
 
