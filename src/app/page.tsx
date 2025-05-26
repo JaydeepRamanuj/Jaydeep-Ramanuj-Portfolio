@@ -183,7 +183,7 @@ export default function Home() {
       <div className="p-3 md:py-10 md:px-24 bg-neutral-950" id="qualification">
         <SectionTitle title="Qualification" />
         <div className="mt-6 max-w-[1000px] mx-auto">
-          <div className="p-6 rounded-md bg-neutral-800 flex justify-between shadow-md text-center text-neutral-300">
+          <div className="p-2 md:p-4 rounded-xl bg-neutral-800 flex justify-between shadow-md text-center text-neutral-300">
             <span className="flex-1">University Name</span>
             <span className="flex-1">Course</span>
             <span className="flex-1">CGPA</span>
