@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "💻 Jaydeep Ramanuj",
   description: "Personal portfolio website showcasing my projects and skills",
+  other: {
+    "color-scheme": "light dark",
+  },
 };
 
 export default function RootLayout({
@@ -18,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-white relative`}>
+      <body
+        className={`${inter.className} bg-slate-950 text-white md:text-inherit  relative`}
+      >
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />
