@@ -14,10 +14,10 @@ function QualificationsCard({
   courseName,
 }: QualificationsCardType) {
   return (
-    <div className="mt-3 p-3 sm:p-6 rounded-md bg-slate-700/20 flex justify-between shadow-2xl text-gray-300 font-semibold text-center">
+    <div className="w-full mt-4 p-4 sm:p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 shadow-lg text-white font-medium flex flex-col sm:flex-row items-center text-sm sm:text-base text-center sm:text-left gap-4 sm:gap-0 sm:justify-between">
       <span className="flex-1">{collageName}</span>
       <span className="flex-1">{courseName}</span>
-      <span className="flex-1">{CGPA}</span>
+      <span className="flex-1">{CGPA.toFixed(2)}</span>
       <span className="flex-1">{passingYear}</span>
     </div>
   );

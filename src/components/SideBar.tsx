@@ -1,6 +1,6 @@
 "use client";
 import { navItems } from "@/app/data";
-import React, { Dispatch, SetStateAction, useEffect } from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import { IoClose } from "react-icons/io5";
 
 type SideBarType = {
@@ -9,33 +9,28 @@ type SideBarType = {
 };
 
 function SideBar({ isSideBarVisible, setSideBar }: SideBarType) {
-  useEffect(() => {}, [isSideBarVisible]);
   return (
     <div
-      className={`absolute w-full h-screen bg-slate-600  flex-col justify-center items-center md:hidden top-0 transition-all flex ${
-        isSideBarVisible ? "left-0" : "left-full "
-      } z-10`}
+      className={`fixed top-0 left-0 w-full h-screen bg-slate-600/90  backdrop-blur-xl border-r border-white/10 z-40 flex flex-col items-center justify-center space-y-6 transition-all duration-300 ${
+        isSideBarVisible ? "translate-x-0" : "translate-x-full"
+      }`}
     >
       {navItems.map((item) => (
         <a
           key={item.name}
           href={item.href}
-          className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md font-medium text-lg"
-          onClick={() => {
-            setSideBar(() => !isSideBarVisible);
-          }}
+          className="text-white text-lg font-medium hover:text-indigo-300 transition-colors"
+          onClick={() => setSideBar(false)}
         >
           {item.name}
         </a>
       ))}
 
       <div
-        className="p-1 bg-slate-500/20 rounded-md cursor-pointer active:scale-95 absolute top-1/2 -translate-y-40 right-8"
-        onClick={() => {
-          setSideBar(() => !isSideBarVisible);
-        }}
+        className="absolute top-1/2 -translate-y-52 right-8 p-2 bg-white/10 border border-white/20 rounded-md cursor-pointer active:scale-95 backdrop-blur-md"
+        onClick={() => setSideBar(false)}
       >
-        <IoClose className="text-2xl" />
+        <IoClose className="text-2xl text-white" />
       </div>
     </div>
   );

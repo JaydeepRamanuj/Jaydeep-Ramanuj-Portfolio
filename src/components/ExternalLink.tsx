@@ -10,10 +10,11 @@ function ExternalLink({ title, link }: ExternalLinkType) {
   return (
     <a
       href={link}
-      className="w-fit mt-6  bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-md focus:outline-none focus:shadow-outline px-4 py-2 flex items-center"
+      target="_blank"
+      className="flex items-center gap-2 px-3 py-1.5 rounded-md font-medium bg-blue-500/40 text-white border border-white/20 hover:bg-white/20 transition-all backdrop-blur-sm shadow-sm group"
     >
-      <span className="mr-2">{title}</span>
-      <LuExternalLink />
+      <span>{title}</span>
+      <LuExternalLink className="text-lg transition-all  group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
     </a>
   );
 }

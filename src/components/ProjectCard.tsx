@@ -22,42 +22,43 @@ const ProjectCard = ({
 }: ProjectCardType) => {
   return (
     <div
-      className={`bg-gray-800 rounded-xl shadow-lg flex flex-col md:flex-row items-center overflow-hidden max-w-[1000px] p-2 md:p-6 hover:scale-[1.015] transition-all hover:shadow-2xl relative ${
-        isUnderDevelopment && "border-2 border-orange-400/90"
+      className={`bg-white/5 backdrop-blur-md rounded-2xl shadow-xl flex flex-col md:flex-row items-center overflow-hidden max-w-[1000px] p-4 md:p-6 transition-all hover:scale-[1.02] hover:shadow-2xl relative border-2 ${
+        isUnderDevelopment ? " border-orange-400/70" : "border-white/10"
       }`}
     >
       {img && (
-        <div className="w-full md:w-1/2 relative h-72 p-8">
+        <div className="w-full md:w-1/2 relative h-72 p-4">
           <Image
             src={img}
             alt={title}
             fill
-            className="object-cover rounded hover:scale-[1.03] transition-all duration-500"
+            className="object-cover rounded-xl transition-transform duration-500 hover:scale-105"
           />
         </div>
       )}
 
-      <div className="p-3 md:p-8 text-white flex-1">
-        <h2 className="text-2xl font-bold mb-4">{title}</h2>
-        <p className="text-gray-300 mb-6">{description}</p>
+      <div className="p-4 md:p-6 text-white flex-1">
+        <h2 className="text-2xl font-semibold mb-3">{title}</h2>
+        <p className="text-gray-300 mb-5">{description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {tags.map((tag, index) => (
             <span
               key={index}
-              className="bg-gray-700 text-gray-200 rounded-full px-3 py-1 text-sm font-medium"
+              className="bg-white/10 border border-white/10 backdrop-blur-sm text-gray-200 rounded-full px-3 py-1 text-sm font-medium"
             >
               {tag}
             </span>
           ))}
         </div>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-4 flex-wrap">
           {liveLink && <ExternalLink title="Live" link={liveLink} />}
-          <ExternalLink title="Github" link={githubLink} />
+          <ExternalLink title="GitHub" link={githubLink} />
         </div>
       </div>
+
       {isUnderDevelopment && (
-        <div className="bg-orange-400/90 absolute text-white text-center top-0 left-1/2 -translate-x-1/2 rounded-b-md px-2 py-0.5">
-          This project is under developemnt
+        <div className="bg-orange-400/80 absolute text-white text-sm font-semibold text-center top-0 left-1/2 -translate-x-1/2 rounded-b-md px-3 py-1 shadow-md backdrop-blur-sm">
+          This project is under development
         </div>
       )}
     </div>

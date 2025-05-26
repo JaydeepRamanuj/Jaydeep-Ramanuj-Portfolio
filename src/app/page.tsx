@@ -20,26 +20,26 @@ import { FaCodepen } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-neutral-950 text-neutral-200">
       {/* hero-section */}
       <div
-        className="bg-slate-950 flex justify-center flex-wrap-reverse items-center gap-6 md:gap-24 pt-28 pb-4 md:pt-44 md:pb-32"
+        className="bg-neutral-950 flex justify-center flex-wrap-reverse items-center gap-6 md:gap-24 pt-28 pb-4 md:pt-44 md:pb-32"
         id="home"
       >
         <div className="info max-w-[600px] p-3">
           <a href="#home">
-            <h1 className="text-4xl font-bold">
+            <h1 className="text-4xl font-bold text-yellow-300">
               Namaste, <br /> I&apos;m Jaydeep Ramanuj 👋
             </h1>
           </a>
-          <h1 className="mt-6">
+          <h1 className="mt-6 text-neutral-300">
             I’m a frontend developer skilled in React and Next.js, aiming to
             build fast, scalable, and responsive web applications that deliver
             real value. With 1 year and 4 months of teaching experience, I blend
             technical ability with strong communication. I aim to build
             real-world solutions and grow both as a developer and as a person.
           </h1>
-          <div className="flex mt-6 gap-6">
+          <div className="flex mt-6 gap-6 text-yellow-200">
             <a
               href="https://github.com/JaydeepRamanuj"
               className="block w-fit  p-1.5 rounded hover:bg-white/10 text-xl"
@@ -68,13 +68,13 @@ export default function Home() {
           <a
             href="/Resume_Jaydeep_Ramanuj_may_2025.pdf"
             download="Resume_Jaydeep_Ramanuj_may_2025.pdf"
-            className="block mt-6 w-fit  px-4 py-1.5 rounded-full bg-slate-500/40 cursor-pointer hover:bg-slate-500/60 active:scale-95"
+            className="block mt-6 w-fit  px-4 py-1.5 rounded-full bg-yellow-400/10 text-yellow-300 hover:bg-yellow-400/20 active:scale-95 transition-all"
           >
             Download Resume
           </a>
         </div>
         <div>
-          <div className="h-[200px] md:h-[300px] w-[150px] md:w-[250px] rounded relative isolate after:w-full after:h-full after:bg-slate-500/40 after:rounded after:absolute after:top-4 after:left-4 md:after:top-10  md:after:left-10 after:-z-10">
+          <div className="h-[200px] md:h-[300px] w-[150px] md:w-[250px] rounded relative isolate after:w-full after:h-full after:bg-yellow-300/10 after:rounded after:absolute after:top-4 after:left-4 md:after:top-10  md:after:left-10 after:-z-10">
             <img
               src="/me.jpeg"
               alt="hero-image.jpg"
@@ -83,13 +83,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* about-section */}
-      {/* <div className=" p-3 md:py-10 md:px-24 bg-slate-900">
-        <SectionTitle title="About me" />
-        <div></div>
-      </div> */}
+
       {/* skills-section */}
-      <div className="p-3 md:py-10 md:px-24 bg-slate-950" id="skills">
+      <div className="p-3 md:py-10 md:px-24 bg-neutral-900" id="skills">
         <SectionTitle title="Skills" />
         <div className="mt-4 md:mt-10 flex flex-wrap md:flex-nowrap gap-3 justify-evenly">
           <SkillsSection
@@ -102,9 +98,9 @@ export default function Home() {
           />
           <SkillsSection title="Explored skills" data={FamiliarAndExplored} />
         </div>
-        <div className="w-fit mx-auto mt-6 flex flex-col sm:flex-row  bg-white/10 rounded-md sm:rounded-full  px-3 py-1 gap-6 ">
+        <div className="w-fit mx-auto mt-6 flex flex-col sm:flex-row bg-white/10 text-yellow-200 rounded-md sm:rounded-full px-3 py-1 gap-6">
           <div className="flex items-center gap-2">
-            <span className="block h-4 w-4 rounded-full bg-green-400/60"></span>
+            <span className="block h-4 w-4 rounded-full bg-green-500/60"></span>
             <span>Core Expertise</span>
           </div>
           <div className="flex items-center gap-2">
@@ -112,13 +108,14 @@ export default function Home() {
             <span>Confident</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="block h-4 w-4 rounded-full bg-yellow-300/40"></span>
+            <span className="block h-4 w-4 rounded-full bg-yellow-300/20"></span>
             <span>Intermediate</span>
           </div>
         </div>
       </div>
+
       {/* projects-section */}
-      <div className="p-3 md:py-10 md:px-24 bg-slate-900" id="projects">
+      <div className="p-3 md:py-10 md:px-24 bg-neutral-950" id="projects">
         <SectionTitle title="Projects" />
         <div className="flex flex-col mt-6 items-center gap-6">
           {projects.map((project, index) => (
@@ -135,8 +132,9 @@ export default function Home() {
           ))}
         </div>
       </div>
+
       {/* experience-section */}
-      <div className="p-3 md:py-10 md:px-24 bg-slate-950" id="experience">
+      <div className="p-3 md:py-10 md:px-24 bg-neutral-900" id="experience">
         <SectionTitle title="Experience" />
         <div className="mt-6 w-fit mx-auto flex flex-col gap-6">
           {experiences.map((experience, index) => (
@@ -153,7 +151,7 @@ export default function Home() {
         </div>
         <div className="mt-6 mx-auto max-w-[700px]">
           <h3 className="text-xl font-semibold">Note:</h3>
-          <ul className="mt-4 list-disc">
+          <ul className="mt-4 list-disc list-inside text-neutral-300">
             <li>
               <span>
                 I also have <b>7 month experience</b> collaborating on freelance
@@ -180,11 +178,12 @@ export default function Home() {
           </ul>
         </div>
       </div>
+
       {/* Qualification-section */}
-      <div className="p-3 md:py-10 md:px-24 bg-slate-900" id="qualification">
+      <div className="p-3 md:py-10 md:px-24 bg-neutral-950" id="qualification">
         <SectionTitle title="Qualification" />
         <div className="mt-6 max-w-[1000px] mx-auto">
-          <div className=" p-6 rounded-md bg-slate-700 flex justify-between shadow-2xl text-gray-300 text-center">
+          <div className="p-6 rounded-md bg-neutral-800 flex justify-between shadow-md text-center text-neutral-300">
             <span className="flex-1">University Name</span>
             <span className="flex-1">Course</span>
             <span className="flex-1">CGPA</span>
@@ -202,10 +201,11 @@ export default function Home() {
           ))}
         </div>
       </div>
+
       {/* Mindset and Values-section */}
-      <div className=" p-3 md:py-10 lg:px-24 bg-slate-950">
+      <div className="p-3 md:py-10 lg:px-24 bg-neutral-900">
         <SectionTitle title="Mindset" />
-        <div className="w-full lg:w-1/2 mx-auto text-gray-200 text-start md:text-justify mt-6">
+        <div className="w-full lg:w-1/2 mx-auto text-neutral-300 text-start md:text-justify mt-6">
           <p>
             I want to bridge the gap between <b>coding</b> and
             <strong> programming</strong>, because being a programmer means more
@@ -305,25 +305,26 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       {/* contact me section */}
-      <div className="p-3 md:py-10 md:px-24 bg-slate-900" id="contact">
+      <div className="p-3 md:py-10 md:px-24 bg-neutral-950" id="contact">
         <SectionTitle title="Get in touch" />
-        <div className="mx-auto mt-6 max-w-[500px] text-center">
+        <div className="mx-auto mt-6 max-w-[500px] text-center text-neutral-300">
           <h3 className="text-lg sm:text-xl">
             Feel free to reach out to me if you are looking for a developer,
             have a query, or simply want to connect.
           </h3>
-          <h1 className="mt-6 flex gap-4 justify-center items-center text-xl sm:text-3xl">
+          <h1 className="mt-6 flex gap-4 justify-center items-center text-xl sm:text-3xl text-yellow-300">
             <MdOutlineEmail />
             <span>jaydeepramanuj.jd@gmail.com</span>
           </h1>
-          <h1 className="mt-4 flex gap-4 justify-center items-center text-xl sm:text-3xl ">
+          <h1 className="mt-4 flex gap-4 justify-center items-center text-xl sm:text-3xl text-yellow-300">
             <IoCallOutline />
             <span>+91 9510134230</span>
           </h1>
           <div className="mt-10">
             <h4>You may also find me on these platforms!</h4>
-            <div className="flex w-fit mx-auto mt-4 gap-6">
+            <div className="flex w-fit mx-auto mt-4 gap-6 text-yellow-200">
               <a
                 href="https://github.com/JaydeepRamanuj"
                 className="block w-fit  p-1.5 rounded hover:bg-white/10 text-xl"

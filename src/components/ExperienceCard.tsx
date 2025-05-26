@@ -19,7 +19,7 @@ const ExperienceCard = ({
   points,
 }: ExperienceCardType) => {
   return (
-    <div className="p-3 sm:p-6 rounded-md bg-slate-700 flex flex-col items-center lg:max-w-[750px] shadow-2xl text-gray-300">
+    <div className="p-3 sm:p-6 rounded-2xl bg-white/5 flex flex-col items-center lg:max-w-[750px] shadow-2xl text-gray-300 backdrop-blur-lg">
       <div className="w-full flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-0">
         <div className="flex flex-col items-center">
           <Image src={companyLogo} alt={companyName} width={50} height={50} />
