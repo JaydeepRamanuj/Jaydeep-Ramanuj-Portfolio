@@ -11,7 +11,7 @@ type SideBarType = {
 function SideBar({ isSideBarVisible, setSideBar }: SideBarType) {
   return (
     <div
-      className={`fixed top-0 left-0 w-full h-screen bg-slate-600/90  backdrop-blur-xl border-r border-white/10 z-40 flex flex-col items-center justify-center space-y-6 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full h-screen bg-black/80  backdrop-blur-3xl z-40 flex flex-col items-center justify-center space-y-6 transition-all duration-300 border-4 border-yellow-400/20   ${
         isSideBarVisible ? "translate-x-0" : "translate-x-full"
       }`}
     >

@@ -152,7 +152,7 @@ export const projects: Array<ProjectsType> = [
   {
     title: "Kanban app",
     description:
-      "Kanban app is first entry in productivity suite. Currently it supports managing tasks locally and Authentication.",
+      "Kanban app is first entry in productivity suite. It supports managing tasks in kanban style with drag and drop support, login to sync your tasks.",
     img: "/kanban-app.png",
     liveLink: "https://kanbanapp-jd.netlify.app/",
     githubLink: "https://github.com/JaydeepRamanuj/kanban-app-zustand",

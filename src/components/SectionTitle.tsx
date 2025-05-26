@@ -4,7 +4,7 @@ type SectionTitleType = {
 
 const SectionTitle = ({ title }: SectionTitleType) => {
   return (
-    <div className="block px-3 py-1 w-fit mx-auto rounded-full bg-slate-600 text-gray-300">
+    <div className="block mt-6 w-fit px-4 mx-auto py-1.5 rounded-full bg-yellow-400/10 text-yellow-300">
       {title}
     </div>
   );
