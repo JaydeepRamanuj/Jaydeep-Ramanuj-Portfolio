@@ -240,7 +240,7 @@ export default function Home() {
               because when we work together, we grow together.
             </p>
           </details>
-          <div>
+          {/* <div>
             <h4 className="text-xl font-semibold mt-6">Note on AI Usage</h4>
             <p className="mt-3">
               I actively explore AI tools like ChatGPT to deepen my
@@ -254,10 +254,49 @@ export default function Home() {
               I believe in using AI as a supportive tool, not a replacement for
               fundamental skills.
             </p>
-          </div>
+          </div> */}
 
           <div>
-            <h3 className="text-xl font-semibold mt-6">
+            <h4 className="text-xl font-semibold mt-6 underline decoration-yellow-300/80  underline-offset-4">
+              Note on AI Usage
+            </h4>
+          </div>
+          <p className="mt-3">
+            I actively leverage AI tools like ChatGPT to enhance my development
+            process, viewing them as powerful assistants rather than
+            replacements for fundamental skills. My applications of AI include:
+          </p>
+          <ul className="list-disc">
+            <li className="mt-2">
+              <b>Accelerating Learning:</b> Deepening my understanding of
+              complex concepts and exploring new technologies.
+            </li>
+            <li className="mt-2">
+              <b> Problem Solving:</b> Debugging tricky issues and identifying
+              efficient solutions.
+            </li>
+            <li className="mt-2">
+              <b>Communication & Documentation:</b> Crafting clear and concise
+              README files, project summaries, and explanations.
+            </li>
+            <li className="mt-2">
+              <b>UI/UX Enhancement:</b> Expediting the visual design and styling
+              of user interfaces (e.g., with Tailwind CSS), where I guide the AI
+              to achieve specific aesthetic goals while maintaining a deep
+              understanding of the underlying implementation.
+            </li>
+          </ul>
+
+          <p className="mt-3">
+            Crucially, all core application logic and architectural code across
+            my portfolio and GitHub is handwritten by me as an integral part of
+            my continuous learning journey. I believe in using AI strategically
+            to boost productivity and refine output, while always ensuring
+            mastery of the foundational skills.
+          </p>
+
+          <div>
+            <h3 className="text-xl font-semibold mt-6 underline decoration-yellow-300/80  underline-offset-4">
               My Roadmap for the Next 12–15 Months
             </h3>
             <p className="text-gray-200 mt-2">
