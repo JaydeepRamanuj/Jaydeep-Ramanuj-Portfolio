@@ -122,7 +122,7 @@ export const projects: Array<ProjectsType> = [
     githubLink: "https://github.com/JaydeepRamanuj/youtube-clone",
     tags: ["React.js", "YouTube v3 API", "ContextAPI", "TailwindCSS"],
     specialMessage:
-      "⚠️ This project is known to have issues when it run out of daily quota or bad responses from server because of free 'YouTube V3' API from RapidAPI. I'm migrating to official YouTube, under progress.",
+      "⚠️ This project is known to have issues when it run out of daily quota or bad responses from server because of free 'YouTube V3' API from RapidAPI. I'm migrating to official YouTube API, under progress.",
     specialLink: "https://youtube-clone-seven-zeta.vercel.app/",
   },
   {
