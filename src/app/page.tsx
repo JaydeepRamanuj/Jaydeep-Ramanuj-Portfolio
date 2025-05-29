@@ -128,6 +128,8 @@ export default function Home() {
               liveLink={project.liveLink}
               tags={project.tags}
               isUnderDevelopment={project.isUnderDevelopment}
+              specialMessage={project.specialMessage}
+              specialLink={project.specialLink}
             />
           ))}
         </div>

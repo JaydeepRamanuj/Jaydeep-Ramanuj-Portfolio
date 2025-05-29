@@ -98,6 +98,8 @@ export type ProjectsType = {
   githubLink: string;
   tags: Array<string>;
   isUnderDevelopment?: boolean;
+  specialMessage?: string;
+  specialLink?: string;
 };
 
 export const projects: Array<ProjectsType> = [
@@ -119,6 +121,9 @@ export const projects: Array<ProjectsType> = [
     liveLink: "https://youtube-clone-jd.netlify.app/",
     githubLink: "https://github.com/JaydeepRamanuj/youtube-clone",
     tags: ["React.js", "YouTube v3 API", "ContextAPI", "TailwindCSS"],
+    specialMessage:
+      "⚠️ This project is known to have issues when it run out of daily quota or bad responses from server because of free 'YouTube V3' API from RapidAPI. I'm migrating to official YouTube, under progress.",
+    specialLink: "https://youtube-clone-seven-zeta.vercel.app/",
   },
   {
     title: "Admin Dashboard",
