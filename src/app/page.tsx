@@ -130,6 +130,7 @@ export default function Home() {
               isUnderDevelopment={project.isUnderDevelopment}
               specialMessage={project.specialMessage}
               specialLink={project.specialLink}
+              specialMessageType={project.specialMessageType}
             />
           ))}
         </div>

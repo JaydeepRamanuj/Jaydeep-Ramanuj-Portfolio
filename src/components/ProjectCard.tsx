@@ -11,6 +11,7 @@ type ProjectCardType = {
   isUnderDevelopment?: boolean;
   specialMessage?: string;
   specialLink?: string;
+  specialMessageType?: "success" | "warn" | "note";
 };
 
 const ProjectCard = ({
@@ -23,7 +24,24 @@ const ProjectCard = ({
   isUnderDevelopment = false,
   specialMessage,
   specialLink,
+  specialMessageType,
 }: ProjectCardType) => {
+  let specialMessageStyle = "";
+  (() => {
+    switch (specialMessageType) {
+      case "success":
+        specialMessageStyle = "bg-green-500/30";
+        break;
+      case "warn":
+        specialMessageStyle = "bg-orange-500/30";
+        break;
+      default:
+        specialMessageStyle = "bg-gray-500/30";
+    }
+  })();
+  specialMessageType && console.log(specialMessageType);
+  specialMessageType && console.log(specialMessageStyle);
+
   return (
     <div
       className={`bg-white/5 backdrop-blur-md rounded-2xl shadow-xl overflow-hidden max-w-[1000px] p-4 md:p-6 transition-all hover:scale-[1.02] hover:shadow-2xl relative border-2 ${
@@ -74,7 +92,9 @@ const ProjectCard = ({
         )}
       </div>
       {specialMessage && (
-        <div className="px-3 py-1.5 bg-orange-500/30 text-white rounded text-sm">
+        <div
+          className={`px-3 py-1.5 text-white rounded text-sm ${specialMessageStyle}`}
+        >
           {specialMessage}
         </div>
       )}

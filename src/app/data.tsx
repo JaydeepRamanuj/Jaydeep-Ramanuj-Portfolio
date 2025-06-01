@@ -100,6 +100,7 @@ export type ProjectsType = {
   isUnderDevelopment?: boolean;
   specialMessage?: string;
   specialLink?: string;
+  specialMessageType?: "success" | "warn" | "note";
 };
 
 export const projects: Array<ProjectsType> = [
@@ -116,14 +117,15 @@ export const projects: Array<ProjectsType> = [
   {
     title: "Youtube Clone",
     description:
-      "This YouTube Clone is built with React.js, Tailwind CSS, Context API, and the YouTube V3 API via RapidAPI. It features a Home Page for trending videos, a Search Results Page with real-time querying, a Video Page for watching content with related suggestions, and a Channel Page displaying creator info and their uploads.",
+      "This YouTube Clone is built with React.js, Tailwind CSS, Context API, and the YouTube V3 API. It features a Home Page for trending videos, a Search Results Page with real-time querying, a Video Page for watching content with related suggestions, and a Channel Page displaying creator info and their uploads.",
     img: "/youtube-clone.png",
     liveLink: "https://youtube-clone-jd.netlify.app/",
     githubLink: "https://github.com/JaydeepRamanuj/youtube-clone",
     tags: ["React.js", "YouTube v3 API", "ContextAPI", "TailwindCSS"],
     specialMessage:
-      "⚠️ This project is known to have issues when it run out of daily quota or bad responses from server because of free 'YouTube V3' API from RapidAPI. I'm migrating to official YouTube API, under progress.",
-    specialLink: "https://youtube-clone-seven-zeta.vercel.app/",
+      "This project is now using official Youtube V3 API, It was using RapidAPI before",
+    specialMessageType: "success",
+    // specialLink: "https://youtube-clone-seven-zeta.vercel.app/",
   },
   {
     title: "Admin Dashboard",
