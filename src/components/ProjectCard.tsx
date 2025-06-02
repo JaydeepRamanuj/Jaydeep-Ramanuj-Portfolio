@@ -39,8 +39,6 @@ const ProjectCard = ({
         specialMessageStyle = "bg-gray-500/30";
     }
   })();
-  specialMessageType && console.log(specialMessageType);
-  specialMessageType && console.log(specialMessageStyle);
 
   return (
     <div
