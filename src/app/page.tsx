@@ -330,12 +330,14 @@ export default function Home() {
               </li>
               <li>
                 Strengthen soft skills including
-                <b>communication, team collaboration, and problem-solving</b>
+                <b className="mx-1">
+                  communication, team collaboration, and problem-solving
+                </b>
               </li>
               <li>
                 Explore modern backend technologies such as
-                <b>GraphQL, PostgreSQL, and Redis</b> to enhance frontend
-                expertise
+                <b className="mx-1">GraphQL, PostgreSQL, and Redis</b> to
+                enhance frontend expertise
               </li>
             </ol>
 
