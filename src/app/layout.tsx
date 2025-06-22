@@ -7,10 +7,13 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "💻 Jaydeep Ramanuj",
+  title: "Jaydeep Ramanuj",
   description: "Personal portfolio website showcasing my projects and skills",
   other: {
     "color-scheme": "dark",
+  },
+  icons: {
+    icon: "/me.ico",
   },
 };
 
