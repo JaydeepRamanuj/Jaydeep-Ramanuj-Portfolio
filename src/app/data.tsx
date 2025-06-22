@@ -1,3 +1,5 @@
+import EmployeePortalNote from "@/components/EmployeePortalNote";
+import { ReactNode } from "react";
 import { BsPersonFill } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
 import { FaCode } from "react-icons/fa";
@@ -95,15 +97,25 @@ export type ProjectsType = {
   description: string;
   img?: string;
   liveLink?: string;
-  githubLink: string;
+  githubLink?: string;
   tags: Array<string>;
   isUnderDevelopment?: boolean;
   specialMessage?: string;
   specialLink?: string;
   specialMessageType?: "success" | "warn" | "note";
+  specialNode?: ReactNode;
 };
 
 export const projects: Array<ProjectsType> = [
+  {
+    title: "Employee portal app",
+    description:
+      "A Mobile-first, real-world web app built to streamline employee and attendance management for a company. It Enables tracking of 150+ daily attendances, department-wise filtering, employee archiving/restoration, document uploads, and PDF generation. With proper company side testing it can be used at multiple centers",
+    img: "/Employee-portal-desktop.png",
+    liveLink: "https://employee-portal-jd.netlify.app/",
+    tags: ["React.js", "TypeScript", "Firebase", "Zustand", "TailwindCSS"],
+    specialNode: <EmployeePortalNote />,
+  },
   {
     title: "E-commerce app",
     description:
@@ -122,40 +134,9 @@ export const projects: Array<ProjectsType> = [
     liveLink: "https://youtube-clone-jd.netlify.app/",
     githubLink: "https://github.com/JaydeepRamanuj/youtube-clone",
     tags: ["React.js", "YouTube v3 API", "ContextAPI", "TailwindCSS"],
-    specialMessage:
-      "This project is now using official Youtube V3 API, It was using RapidAPI before",
-    specialMessageType: "success",
     // specialLink: "https://youtube-clone-seven-zeta.vercel.app/",
   },
-  {
-    title: "Admin Dashboard",
-    description:
-      "A platform for comparing and finding affordable flights, as well as booking and purchasing tickets safely and easily in a few simple clicks.",
-    img: "/admin-dashboard.png",
-    liveLink: "https://admin-dashboard-jd.netlify.app/",
-    githubLink: "https://github.com/JaydeepRamanuj/admin-dashboard",
-    tags: ["React.js", "Recharts", "ContextAPI", "TailwindCSS"],
-  },
 
-  {
-    title: "Flex Visulizer",
-    description:
-      "An interactive flexbox tool built using React.js, Shadcn/UI, and Context API which helps users learn and experiment with Flexbox visually. Users can  apply Flexbox properties using dropdowns and see how the layout behaves in real time. This project is a React-based upgrade of an earlier Vanilla JS version, aiming to make learning Flexbox easy and interesting",
-    img: "/flex-visulizer.png",
-    liveLink: "https://flexvisualizer.netlify.app/",
-    githubLink: "https://github.com/JaydeepRamanuj/flex-visulizer",
-    tags: ["React.js", "Shadcn", "ContextAPI"],
-  },
-
-  {
-    title: "Mini Projects",
-    description:
-      "This project is a collection of small React.js projects/ features. It was an effort to practice and preserve reusable components / features.",
-    img: "/mini-react-projects.png",
-    liveLink: "https://mini-react-projects-jd.netlify.app/",
-    githubLink: "https://github.com/JaydeepRamanuj/mini-react-projects",
-    tags: ["React.js"],
-  },
   {
     title: "Kanban app",
     description:
@@ -171,7 +152,37 @@ export const projects: Array<ProjectsType> = [
       "TailwindCSS",
       "DND kit",
     ],
-    isUnderDevelopment: true,
+    // isUnderDevelopment: true,
+  },
+  {
+    title: "Mini Projects",
+    description:
+      "This project is a collection 25+ of small React.js projects/ features. It was an effort to practice and preserve reusable components / features.",
+    img: "/mini-react-projects.png",
+    liveLink: "https://mini-react-projects-jd.netlify.app/",
+    githubLink: "https://github.com/JaydeepRamanuj/mini-react-projects",
+    tags: ["React.js", "TailwindCSS"],
+    specialMessage: "Added 15+ new components",
+    specialMessageType: "success",
+  },
+  {
+    title: "Flex Visulizer",
+    description:
+      "An interactive flexbox tool built using React.js, Shadcn/UI, and Context API which helps users learn and experiment with Flexbox visually. Users can  apply Flexbox properties using dropdowns and see how the layout behaves in real time. This project is a React-based upgrade of an earlier Vanilla JS version, aiming to make learning Flexbox easy and interesting",
+    img: "/flex-visulizer.png",
+    liveLink: "https://flexvisualizer.netlify.app/",
+    githubLink: "https://github.com/JaydeepRamanuj/flex-visulizer",
+    tags: ["React.js", "Shadcn", "ContextAPI"],
+  },
+
+  {
+    title: "Admin Dashboard",
+    description:
+      "A platform for comparing and finding affordable flights, as well as booking and purchasing tickets safely and easily in a few simple clicks.",
+    img: "/admin-dashboard.png",
+    liveLink: "https://admin-dashboard-jd.netlify.app/",
+    githubLink: "https://github.com/JaydeepRamanuj/admin-dashboard",
+    tags: ["React.js", "Recharts", "ContextAPI", "TailwindCSS"],
   },
   {
     title: "Frontend step stones",

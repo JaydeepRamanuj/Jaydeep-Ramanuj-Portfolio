@@ -66,8 +66,8 @@ export default function Home() {
             </a>
           </div>
           <a
-            href="/Resume_Jaydeep_Ramanuj_may_2025.pdf"
-            download="Resume_Jaydeep_Ramanuj_may_2025.pdf"
+            href="/Resume_Jaydeep_Ramanuj_June_2025.pdf"
+            download="Resume_Jaydeep_Ramanuj_June_2025.pdf"
             className="block mt-6 w-fit  px-4 py-1.5 rounded-full bg-yellow-400/10 text-yellow-300 hover:bg-yellow-400/20 active:scale-95 transition-all"
           >
             Download Resume
@@ -131,6 +131,7 @@ export default function Home() {
               specialMessage={project.specialMessage}
               specialLink={project.specialLink}
               specialMessageType={project.specialMessageType}
+              specialNode={project.specialNode}
             />
           ))}
         </div>
@@ -360,11 +361,13 @@ export default function Home() {
           </h3>
           <h1 className="mt-6 flex gap-4 justify-center items-center text-xl sm:text-3xl text-yellow-300">
             <MdOutlineEmail />
-            <span>jaydeepramanuj.jd@gmail.com</span>
+            <a href="mailto:jaydeepramanuj.jd@gmail.com">
+              jaydeepramanuj.jd@gmail.com
+            </a>
           </h1>
           <h1 className="mt-4 flex gap-4 justify-center items-center text-xl sm:text-3xl text-yellow-300">
             <IoCallOutline />
-            <span>+91 9510134230</span>
+            <a href="tel:+919510134230">+91 9510134230</a>
           </h1>
           <div className="mt-10">
             <h4>You may also find me on these platforms!</h4>

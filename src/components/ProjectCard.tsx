@@ -1,17 +1,19 @@
 import Image from "next/image";
 import ExternalLink from "./ExternalLink";
+import { ReactNode } from "react";
 
 type ProjectCardType = {
   title: string;
   description: string;
   img?: string;
   tags: Array<string>;
-  githubLink: string;
+  githubLink?: string;
   liveLink?: string;
   isUnderDevelopment?: boolean;
   specialMessage?: string;
   specialLink?: string;
   specialMessageType?: "success" | "warn" | "note";
+  specialNode?: ReactNode;
 };
 
 const ProjectCard = ({
@@ -25,12 +27,13 @@ const ProjectCard = ({
   specialMessage,
   specialLink,
   specialMessageType,
+  specialNode,
 }: ProjectCardType) => {
   let specialMessageStyle = "";
   (() => {
     switch (specialMessageType) {
       case "success":
-        specialMessageStyle = "bg-green-500/30";
+        specialMessageStyle = "bg-green-500/30 border border-green-500/60";
         break;
       case "warn":
         specialMessageStyle = "bg-orange-500/30";
@@ -40,11 +43,13 @@ const ProjectCard = ({
     }
   })();
 
+  console.log(specialNode);
   return (
     <div
-      className={`bg-white/5 backdrop-blur-md rounded-2xl shadow-xl overflow-hidden max-w-[1000px] p-4 md:p-6 transition-all hover:scale-[1.02] hover:shadow-2xl relative border-2 ${
+      className={`bg-white/5 rounded-2xl shadow-xl overflow-hidden max-w-[1000px] p-4 md:p-6 transition-all hover:scale-[1.02] hover:shadow-2xl relative border-2 ${
         isUnderDevelopment ? " border-orange-400/70" : "border-white/10"
       }`}
+      // }backdrop-blur-md `}
     >
       <div className={` flex flex-col md:flex-row items-center`}>
         {img && (
@@ -73,7 +78,7 @@ const ProjectCard = ({
           </div>
           <div className="flex items-center gap-4 flex-wrap">
             {liveLink && <ExternalLink title="Live" link={liveLink} />}
-            <ExternalLink title="GitHub" link={githubLink} />
+            {githubLink && <ExternalLink title="GitHub" link={githubLink} />}
             {specialLink && (
               <ExternalLink
                 title="Live with YouTube official API"
@@ -91,11 +96,13 @@ const ProjectCard = ({
       </div>
       {specialMessage && (
         <div
-          className={`px-3 py-1.5 text-white rounded text-sm ${specialMessageStyle}`}
+          className={`mt-3 ml-4 md:ml-0  px-3 py-1.5 text-white rounded text-sm w-fit font-semibold ${specialMessageStyle}`}
         >
           {specialMessage}
         </div>
       )}
+
+      {specialNode && specialNode}
     </div>
   );
 };
