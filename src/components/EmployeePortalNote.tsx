@@ -43,7 +43,7 @@ function EmployeePortalNote() {
           className="flex items-center gap-2 bg-yellow-800 border border-gray-600/40 rounded-lg px-3 py-1 cursor-pointer hover:bg-yellow-700 transition"
           onClick={() => copyToClipboard("test@email.com")}
         >
-          <span className="text-sm">Email</span>
+          <span className="text-sm">Email: test@email.com</span>
           {isEmailCopied ? (
             <span className="text-yellow-400">Copied!</span>
           ) : (
@@ -54,7 +54,7 @@ function EmployeePortalNote() {
           className="flex items-center gap-2 bg-yellow-800 border border-gray-600/40 rounded-lg px-3 py-1 cursor-pointer hover:bg-yellow-700 transition"
           onClick={() => copyToClipboard("test@123")}
         >
-          <span className="text-sm">Password</span>
+          <span className="text-sm">Password: test@123</span>
           {isPassCopied ? (
             <span className="text-yellow-400">Copied!</span>
           ) : (
