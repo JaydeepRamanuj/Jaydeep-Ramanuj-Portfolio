@@ -44,7 +44,7 @@ export const AdditionalToolsAndLibraries: Array<SkillType> = [
   { name: "Redux", level: 4, icon: "/techIcons/Redux.png" },
   { name: "Zustand", level: 4, icon: "/techIcons/zustand.png" },
   { name: "Recharts", level: 4, icon: "/techIcons/Recharts.png" },
-  { name: "Shadcn", level: 3, icon: "/techIcons/Shadcn.png" },
+  { name: "Shadcn", level: 4, icon: "/techIcons/Shadcn.png" },
   { name: "MUI", level: 3, icon: "/techIcons/MaterialUI.png" },
   { name: "Clerk", level: 3, icon: "/techIcons/Clerk.png" },
   { name: "Framer motion", level: 3, icon: "/techIcons/Framer-motion.png" },
@@ -107,6 +107,28 @@ export type ProjectsType = {
 };
 
 export const projects: Array<ProjectsType> = [
+  {
+    title: "Snippet Manager",
+    description:
+      "Snippet Manager is a modern web app designed to organize and reuse code snippets with ease. It allows developers to create, categorize, and tag snippets using a rich editor powered by Tiptap, while supporting folder structures, language filters, and notes. Ideal for improving productivity, reducing repetitive coding, and managing reusable logic across projects.",
+    img: "/snippet-manager.png",
+    liveLink: "https://snippet-manager-gamma.vercel.app/",
+    tags: [
+      "React.js",
+      "TypeScript",
+      "Shadcn",
+      "Monaco Editor",
+      "TipTap Editor",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Clerk",
+    ],
+    specialMessage:
+      "⚠️ This app is under development, currently working on backend. I Will polish frontend once backend is working. Check backnend branch for progress",
+    githubLink: "https://github.com/JaydeepRamanuj/Snippet-manager.git",
+    isUnderDevelopment: true,
+  },
   {
     title: "Employee portal app",
     description:
