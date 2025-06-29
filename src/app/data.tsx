@@ -125,7 +125,7 @@ export const projects: Array<ProjectsType> = [
       "Clerk",
     ],
     specialMessage:
-      "⚠️ This app is under development, currently working on backend. I Will polish frontend once backend is working. Check backnend branch for progress",
+      "⚠️ This app is under development, currently working on backend. I will polish frontend once backend is completed. Check backnend branch for progress",
     githubLink: "https://github.com/JaydeepRamanuj/Snippet-manager.git",
     isUnderDevelopment: true,
   },
