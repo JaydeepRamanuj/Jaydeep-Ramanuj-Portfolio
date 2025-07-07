@@ -25,11 +25,13 @@ function SnippetManagerNote() {
   return (
     <div className="rounded-xl bg-green-400/10 p-4 text-gray-100 border border-green-600/30">
       <p className="text-green-300 font-semibold mb-2">
-        Version v1 is shipped. Fixing UX issues and general improvements
+        Version v1 is shipped. Fixing bugs and general improvements
       </p>
       <p className="mb-1">
-        You can register and use the app but{" "}
-        <b>if you want to test with dummy data use below credentials</b>
+        You can register and use the app but
+        <b className="ml-1">
+          if you want to test with dummy data use below credentials
+        </b>
       </p>
 
       <p className="mt-4 mb-2 text-sm text-gray-300">
@@ -61,11 +63,20 @@ function SnippetManagerNote() {
         </div>
       </div>
       <p className="mt-3 text-sm">
-        ⚠️ You may feel lag on first start due to cold start on render (backend
-        deployment platform),
+        ⚠️ You may feel lag on first start due to cold start on{" "}
+        <b className="mx-1">Render </b>
+        (backend deployment platform),
         <span className="text-yellow-400 ml-1">
           Just wait a minute and reload the page.
         </span>
+      </p>
+      <hr className="border-green-300/30 my-3" />
+      <p className="flex items-center gap-3">
+        <span className="block size-4 bg-green-300 rounded-full"></span>
+        <b>
+          Check &apos;Change Logs&apos; tab for fixes and known issues under
+          settings dialogue
+        </b>
       </p>
     </div>
   );
