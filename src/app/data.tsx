@@ -1,4 +1,5 @@
 import EmployeePortalNote from "@/components/EmployeePortalNote";
+import SnippetManagerNote from "@/components/SnippetManagerNote";
 import { ReactNode } from "react";
 import { BsPersonFill } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
@@ -124,10 +125,10 @@ export const projects: Array<ProjectsType> = [
       "MongoDB",
       "Clerk",
     ],
-    specialMessage:
-      "⚠️ This app is under development, currently working on backend. I will polish frontend once backend is completed. Check backnend branch for progress",
+    // specialMessage: "Version v1 is shipped. Fixing UX issues is underway",
     githubLink: "https://github.com/JaydeepRamanuj/Snippet-manager.git",
-    isUnderDevelopment: true,
+    // isUnderDevelopment: true,
+    specialNode: <SnippetManagerNote />,
   },
   {
     title: "Employee portal app",

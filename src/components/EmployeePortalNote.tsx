@@ -65,7 +65,7 @@ function EmployeePortalNote() {
       <p className="mt-3 text-sm">
         ⚠️ If you successfully signed in but don&apos;t get any data
         immediately,
-        <span className="text-yellow-400">Just reload the page.</span>
+        <span className="text-yellow-400 mx-1">Just reload the page.</span>
         This may happen only for first login.
       </p>
     </div>
