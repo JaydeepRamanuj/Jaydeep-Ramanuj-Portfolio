@@ -54,13 +54,13 @@ const ProjectCard = ({
         scale: 0.97,
         // opacity: 0.6,
         y: 15,
-        filter: "blur(5px)",
+        // filter: "blur(5px)",
       }}
       whileInView={{
         scale: 1,
         // opacity: 1,
         y: 0,
-        filter: "blur(0px)",
+        // filter: "blur(0px)",
       }}
       transition={{ duration: 0.3 }}
       className={`bg-white/5 rounded-2xl shadow-xl overflow-hidden max-w-[1000px] p-2 md:p-6 transition-all hover:scale-[1.02] hover:shadow-2xl relative border-2 ${
