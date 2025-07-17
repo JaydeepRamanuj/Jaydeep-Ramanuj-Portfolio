@@ -15,7 +15,7 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <Link
               href="/"
-              className="text-xl font-bold text-white hover:text-gray-200 transition-colors"
+              className="text-lg md:text-xl font-bold text-white hover:text-gray-200 transition-colors"
             >
               Jaydeep Ramanuj
             </Link>
@@ -37,7 +37,7 @@ const Navbar = () => {
             className="p-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-md cursor-pointer active:scale-95 md:hidden"
             onClick={() => setSideBar(!isSideBarVisible)}
           >
-            <IoMenu className="text-2xl text-white" />
+            <IoMenu className="text-lg md:text-2xl text-white" />
           </div>
         </div>
       </div>

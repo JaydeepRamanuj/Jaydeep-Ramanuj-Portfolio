@@ -23,7 +23,7 @@ function SnippetManagerNote() {
   };
 
   return (
-    <div className="rounded-xl bg-green-400/10 p-4 text-gray-100 border border-green-600/30">
+    <div className="rounded-xl bg-green-400/10 p-4 text-gray-100 border border-green-600/30 text-sm md:text-base">
       <p className="text-green-300 font-semibold mb-2">
         Version v1 is shipped. Fixing bugs and general improvements
       </p>
@@ -41,7 +41,10 @@ function SnippetManagerNote() {
       <div className="flex flex-wrap gap-4">
         <div
           className="flex items-center gap-2 bg-green-800 border border-gray-600/40 rounded-lg px-3 py-1 cursor-pointer hover:bg-green-700 transition"
-          onClick={() => copyToClipboard("test@email.com")}
+          onClick={(e) => {
+            e.stopPropagation();
+            copyToClipboard("test@email.com");
+          }}
         >
           <span className="text-sm">Username: testuser</span>
           {isEmailCopied ? (
@@ -52,7 +55,10 @@ function SnippetManagerNote() {
         </div>
         <div
           className="flex items-center gap-2 bg-green-800 border border-gray-600/40 rounded-lg px-3 py-1 cursor-pointer hover:bg-green-700 transition"
-          onClick={() => copyToClipboard("test@123")}
+          onClick={(e) => {
+            e.stopPropagation();
+            copyToClipboard("test@123");
+          }}
         >
           <span className="text-sm">Password: test@123</span>
           {isPassCopied ? (

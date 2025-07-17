@@ -23,7 +23,7 @@ function EmployeePortalNote() {
   };
 
   return (
-    <div className="rounded-xl bg-yellow-400/10 p-4 text-gray-100 border border-yellow-600/30">
+    <div className="rounded-xl bg-yellow-400/10 p-4 text-gray-100 border border-yellow-600/30 text-sm md:text-base">
       <p className="text-yellow-300 font-semibold mb-2">⚠️ Demo Notice</p>
       <p className="mb-1">
         This is a <span className="font-medium">demo deployment</span> with
@@ -41,7 +41,10 @@ function EmployeePortalNote() {
       <div className="flex flex-wrap gap-4">
         <div
           className="flex items-center gap-2 bg-yellow-800 border border-gray-600/40 rounded-lg px-3 py-1 cursor-pointer hover:bg-yellow-700 transition"
-          onClick={() => copyToClipboard("test@email.com")}
+          onClick={(e) => {
+            e.stopPropagation();
+            copyToClipboard("test@email.com");
+          }}
         >
           <span className="text-sm">Email: test@email.com</span>
           {isEmailCopied ? (
@@ -52,7 +55,10 @@ function EmployeePortalNote() {
         </div>
         <div
           className="flex items-center gap-2 bg-yellow-800 border border-gray-600/40 rounded-lg px-3 py-1 cursor-pointer hover:bg-yellow-700 transition"
-          onClick={() => copyToClipboard("test@123")}
+          onClick={(e) => {
+            e.stopPropagation();
+            copyToClipboard("test@123");
+          }}
         >
           <span className="text-sm">Password: test@123</span>
           {isPassCopied ? (

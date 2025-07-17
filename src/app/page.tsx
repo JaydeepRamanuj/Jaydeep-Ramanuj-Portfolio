@@ -28,14 +28,14 @@ export default function Home() {
       >
         <div className="info max-w-[600px] p-3">
           <a href="#home">
-            <h1 className="text-4xl font-bold text-yellow-300">
+            <h1 className="text-xl md:text-4xl font-bold text-yellow-300">
               Namaste, <br /> I&apos;m Jaydeep Ramanuj 👋
             </h1>
           </a>
-          <h1 className="mt-6 text-neutral-300">
+          <h1 className="mt-6 text-neutral-400 text-sm md:text-base">
             I’m a frontend developer skilled in React and Next.js, aiming to
             build fast, scalable, and responsive web applications that deliver
-            real value. With 1 year and 4 months of teaching experience, I blend
+            real value. With 1 year and 4 months of training experience, I blend
             technical ability with strong communication. I aim to build
             real-world solutions and grow both as a developer and as a person.
           </h1>
@@ -68,7 +68,7 @@ export default function Home() {
           <a
             href="/Resume_Jaydeep_Ramanuj_July_2025.pdf"
             download="Resume_Jaydeep_Ramanuj_July_2025.pdf"
-            className="block mt-6 w-fit  px-4 py-1.5 rounded-full bg-yellow-400/10 text-yellow-300 hover:bg-yellow-400/20 active:scale-95 transition-all"
+            className="block mt-6 w-fit  px-4 py-1.5 rounded-full bg-yellow-400/10 text-yellow-300 hover:bg-yellow-400/20 active:scale-95 transition-all text-sm md:text-base"
           >
             Download Resume
           </a>
@@ -98,8 +98,8 @@ export default function Home() {
           />
           <SkillsSection title="Explored skills" data={FamiliarAndExplored} />
         </div>
-        <div className="w-fit mx-auto mt-6 flex flex-col sm:flex-row bg-white/10 text-yellow-200 rounded-md sm:rounded-full px-3 py-1 gap-6">
-          <div className="flex items-center gap-2">
+        <div className="w-fit mx-auto mt-6 flex flex-col sm:flex-row bg-white/10 text-yellow-200 rounded-md sm:rounded-full px-3 py-1 gap-3 md:gap-6 text-xs md:text-base">
+          <div className="flex items-center gap-2 ">
             <span className="block h-4 w-4 rounded-full bg-green-500/60"></span>
             <span>Core Expertise</span>
           </div>
@@ -115,7 +115,10 @@ export default function Home() {
       </div>
 
       {/* projects-section */}
-      <div className="p-3 md:py-10 md:px-24 bg-neutral-950" id="projects">
+      <div
+        className="p-1.5 md:p-3 md:py-10 md:px-24 bg-neutral-950"
+        id="projects"
+      >
         <SectionTitle title="Projects" />
         <div className="flex flex-col mt-6 items-center gap-6">
           {projects.map((project, index) => (
@@ -155,7 +158,7 @@ export default function Home() {
         </div>
         <div className="mt-6 mx-auto max-w-[700px]">
           <h3 className="text-xl font-semibold">Note:</h3>
-          <ul className="mt-4 list-disc list-inside text-neutral-300">
+          <ul className="mt-4 list-disc list-inside  text-sm md:text-base text-neutral-400 space-y-1">
             <li>
               <span>
                 I also have <b>7 month experience</b> collaborating on freelance
@@ -187,7 +190,7 @@ export default function Home() {
       <div className="p-3 md:py-10 md:px-24 bg-neutral-950" id="qualification">
         <SectionTitle title="Qualification" />
         <div className="mt-6 max-w-[1000px] mx-auto">
-          <div className="p-2 md:p-4 rounded-xl bg-neutral-800 flex justify-between shadow-md text-center text-neutral-300">
+          <div className="p-2 md:p-4 rounded-xl bg-neutral-800 flex justify-between shadow-md text-center text-neutral-300 text-xs md:text-base">
             <span className="flex-1">University Name</span>
             <span className="flex-1">Course</span>
             <span className="flex-1">CGPA</span>
@@ -207,7 +210,7 @@ export default function Home() {
       </div>
 
       {/* Mindset and Values-section */}
-      <div className="p-3 md:py-10 lg:px-24 bg-neutral-900">
+      <div className="p-3 md:py-10 lg:px-24 bg-neutral-900 text-sm md:text-base text-neutral-300">
         <SectionTitle title="Mindset" />
         <div className="w-full lg:w-1/2 mx-auto text-neutral-300 text-start md:text-justify mt-6">
           <p>
@@ -244,21 +247,6 @@ export default function Home() {
               because when we work together, we grow together.
             </p>
           </details>
-          {/* <div>
-            <h4 className="text-xl font-semibold mt-6">Note on AI Usage</h4>
-            <p className="mt-3">
-              I actively explore AI tools like ChatGPT to deepen my
-              understanding of concepts, taking notes, debug tricky issues, and
-              improve my communication — especially for writing better README
-              files and summaries.
-              <strong className="mx-2">
-                However, all code across my portfolio and GitHub is handwritten
-                by me as part of my learning process.
-              </strong>
-              I believe in using AI as a supportive tool, not a replacement for
-              fundamental skills.
-            </p>
-          </div> */}
 
           <div>
             <h4 className="text-xl font-semibold mt-6 underline decoration-yellow-300/80  underline-offset-4">
@@ -270,7 +258,7 @@ export default function Home() {
             process, viewing them as powerful assistants rather than
             replacements for fundamental skills. My applications of AI include:
           </p>
-          <ul className="list-disc">
+          <ul className="list-disc pl-4">
             <li className="mt-2">
               <b>Accelerating Learning:</b> Deepening my understanding of
               complex concepts and exploring new technologies.
@@ -359,13 +347,13 @@ export default function Home() {
             Feel free to reach out to me if you are looking for a developer,
             have a query, or simply want to connect.
           </h3>
-          <h1 className="mt-6 flex gap-4 justify-center items-center text-xl sm:text-3xl text-yellow-300">
-            <MdOutlineEmail />
+          <h1 className="mt-6 flex gap-4 justify-center items-center text-lg sm:text-3xl text-yellow-300">
+            {/* <MdOutlineEmail /> */}
             <a href="mailto:jaydeepramanuj.jd@gmail.com">
               jaydeepramanuj.jd@gmail.com
             </a>
           </h1>
-          <h1 className="mt-4 flex gap-4 justify-center items-center text-xl sm:text-3xl text-yellow-300">
+          <h1 className="mt-4 flex gap-4 justify-center items-center text-lg md:text-xl sm:text-3xl text-yellow-300">
             <IoCallOutline />
             <a href="tel:+919510134230">+91 9510134230</a>
           </h1>
