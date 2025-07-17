@@ -120,7 +120,8 @@ export default function Home() {
         id="projects"
       >
         <SectionTitle title="Projects" />
-        <div className="flex flex-col mt-6 items-center gap-6">
+        <div className="flex flex-col mt-6 items-center gap-6 p-2">
+          {/* <AnimatePresence> */}
           {projects.map((project, index) => (
             <ProjectCard
               key={index}
@@ -137,6 +138,7 @@ export default function Home() {
               specialNode={project.specialNode}
             />
           ))}
+          {/* </AnimatePresence> */}
         </div>
       </div>
 
