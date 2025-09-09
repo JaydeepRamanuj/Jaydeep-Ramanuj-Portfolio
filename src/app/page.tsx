@@ -66,8 +66,10 @@ export default function Home() {
             </a>
           </div>
           <a
-            href="/Resume_Jaydeep_Ramanuj.pdf"
-            download="Resume_Jaydeep_Ramanuj.pdf"
+            // href="/Resume_Jaydeep_Ramanuj.pdf"
+            // download="Resume_Jaydeep_Ramanuj.pdf"
+            href="/Jaydeep_Ramanuj_Frontend.pdf"
+            download="Jaydeep_Ramanuj_Frontend.pdf"
             className="block mt-6 w-fit  px-4 py-1.5 rounded-full bg-yellow-400/10 text-yellow-300 hover:bg-yellow-400/20 active:scale-95 transition-all text-sm md:text-base"
           >
             Download Resume
