@@ -27,6 +27,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} relative antialiased overflow-x-hidden`}
       >
+        <div className="bg-noise"></div>
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />

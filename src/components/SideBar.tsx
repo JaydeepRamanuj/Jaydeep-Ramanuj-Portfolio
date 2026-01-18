@@ -4,11 +4,10 @@ import React, { Dispatch, SetStateAction } from "react";
 import { IoClose } from "react-icons/io5";
 import { motion } from "motion/react";
 type SideBarType = {
-  isSideBarVisible: boolean;
   setSideBar: Dispatch<SetStateAction<boolean>>;
 };
 
-function SideBar({ isSideBarVisible, setSideBar }: SideBarType) {
+function SideBar({ setSideBar }: SideBarType) {
   const sidebarVariants = {
     hidden: {
       x: "100%",

@@ -260,7 +260,9 @@ export const experiences: Array<ExperienceCardType> = [
     startDate: "Jan 2026",
     endDate: "Present",
     points: [
-      "Collaborating on internal tools development using NextJs with TypeScript",
+      "Collaborating on internal tools using Next.js, TypeScript, and React Query to build scalable, data-driven features",
+      "Working closely with team members to understand existing codebases, follow best practices, and deliver incremental improvements",
+      "Implementing API integrations, state management, and performance-oriented UI patterns in a production environment",
     ],
   },
   {

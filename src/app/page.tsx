@@ -1,12 +1,9 @@
-import SkillsSection from "@/components/SkillsSection";
+"use client";
 import SkillsInteractive from "@/components/SkillsInteractive";
 import {
-  BackendStack,
   experiences,
-  FrontendStack,
   projects,
   qualifications,
-  ToolsAndOthers,
 } from "./data";
 import ProjectCard from "@/components/ProjectCard";
 import SectionTitle from "@/components/SectionTitle";
@@ -24,13 +21,33 @@ export default function Home() {
     <div className="pt-12 md:pt-0 min-h-screen text-neutral-200">
       {/* hero-section */}
       <div
-        className="min-h-[90vh] flex flex-col justify-center items-center px-4 relative pt-20 pb-12"
+        className="min-h-[90vh] flex flex-col justify-center items-center px-4 relative pt-20 pb-12 overflow-hidden"
         id="home"
-      >
-        {/* Background glow specific to Hero */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] md:w-[500px] h-[500px] bg-yellow-500/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+        onMouseMove={(e) => {
+          const glow = document.getElementById("hero-glow");
+          if (glow) {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const x = e.clientX - rect.left; // Mouse X relative to container
+            const y = e.clientY - rect.top;  // Mouse Y relative to container
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
 
-        <div className="max-w-4xl w-full mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-20">
+            // Calculate distance from center
+            const moveX = (x - centerX) / 7; // Divide by 10 for magnetic "attraction" feel
+            const moveY = (y - centerY) / 7;
+
+            glow.style.transform = `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px))`;
+          }
+        }}
+      >
+        {/* Interactive Background glow */}
+        <div
+          id="hero-glow"
+          className="absolute top-1/2 left-1/2 w-[500px] h-[500px] bg-yellow-500/10 rounded-full blur-[100px] -z-10 pointer-events-none transition-transform duration-300 ease-out"
+          style={{ transform: "translate(-50%, -50%)" }}
+        ></div>
+
+        <div className="max-w-4xl w-full mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-20 relative z-10">
           <div className="order-2 md:order-1 flex-1 text-center md:text-left">
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
               Namaste, <br />
@@ -57,15 +74,22 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="order-1 md:order-2 relative">
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white/5 shadow-2xl">
-              <img
-                src="/me.jpeg"
-                alt="Jaydeep Ramanuj"
-                className="w-full h-full object-cover"
-              />
+          <div className="order-1 md:order-2 relative mt-8 md:mt-0">
+            <div className="relative w-64 h-64 md:w-80 md:h-80">
+              {/* Centered Ring */}
+              <div className="absolute -inset-4 rounded-full border border-yellow-500/30 scale-100"></div>
+
+              {/* Main Image Container */}
+              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/5 shadow-2xl bg-neutral-900">
+                <Image
+                  src="/me.jpeg"
+                  alt="Jaydeep Ramanuj"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
             </div>
-            <div className="absolute inset-0 rounded-full border border-yellow-500/20 scale-110 animate-pulse"></div>
           </div>
         </div>
       </div>
@@ -174,11 +198,11 @@ export default function Home() {
             <div className="space-y-6 text-neutral-300 leading-relaxed">
               <h3 className="text-2xl font-bold text-neutral-100">Coding vs Programming</h3>
               <p>
-                I believe being a programmer is about more than just writing code—it’s about <span className="text-yellow-400">solving real problems</span>.
+                I believe being a programmer is about more than just writing code—it&apos;s about <span className="text-yellow-400">solving real problems</span>.
                 While I love exploring new tech, I rely on battle-tested tools for production.
               </p>
               <p>
-                Growth is a two-way street. I seek environments where I can contribute to the company's goals while evolving my own skills.
+                Growth is a two-way street. I seek environments where I can contribute to the company&apos;s goals while evolving my own skills.
               </p>
             </div>
 
@@ -192,9 +216,9 @@ export default function Home() {
           </div>
 
           <div className="mt-16 pt-16 border-t border-white/5 text-center" id="contact">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">Let's Connect</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">Let&apos;s Connect</h2>
             <p className="text-neutral-400 mb-8 max-w-xl mx-auto">
-              Whether you have a question, a project idea, or just want to say hi, I'll try my best to get back to you!
+              Whether you have a question, a project idea, or just want to say hi, I&apos;ll try my best to get back to you!
             </p>
 
             <div className="flex flex-col md:flex-row items-center justify-center gap-6">

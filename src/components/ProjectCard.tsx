@@ -46,6 +46,14 @@ const ProjectCard = ({
     }
   })();
 
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  // const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setMousePosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+  };
+
   const [showMoreDetails, setShowMoreDetails] = useState(false);
   const [readMore, setReadMore] = useState(false);
   return (
@@ -62,9 +70,18 @@ const ProjectCard = ({
       }}
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
-      className={`group bg-neutral-900/40 rounded-xl overflow-hidden max-w-5xl w-full transition-all hover:bg-neutral-900/60 border border-white/5 ${isUnderDevelopment ? "border-orange-500/30" : "hover:border-yellow-500/20"
+      onMouseMove={handleMouseMove}
+      // onMouseEnter={() => setIsHovering(true)}
+      // onMouseLeave={() => setIsHovering(false)}
+      className={`group relative bg-neutral-900/40 rounded-xl overflow-hidden max-w-5xl w-full transition-all hover:bg-neutral-900/60 border border-white/5 ${isUnderDevelopment ? "border-orange-500/30" : "hover:border-yellow-500/20"
         }`}
     >
+      <div
+        className="pointer-events-none absolute -inset-px opacity-0 transition duration-300 group-hover:opacity-100"
+        style={{
+          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.06), transparent 40%)`,
+        }}
+      />
       <div className={`flex flex-col md:flex-row gap-6 p-4 md:p-6`}>
         {img && (
           <div className="w-full md:w-[45%] relative aspect-video md:aspect-auto md:h-64 rounded-lg overflow-hidden border border-white/5 group-hover:border-white/10 transition-colors">
