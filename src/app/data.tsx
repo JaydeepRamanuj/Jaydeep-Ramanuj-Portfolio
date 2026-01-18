@@ -22,46 +22,40 @@ export type SkillType = {
   icon: string;
 };
 
-export const PrimarySkills: Array<SkillType> = [
+export const FrontendStack: Array<SkillType> = [
   { name: "React.js", level: 5, icon: "/techIcons/React.png" },
-  { name: "JavaScript", level: 5, icon: "/techIcons/JavaScript.png" },
-  { name: "Next.js", level: 3, icon: "/techIcons/Next.js.png" },
-  { name: "Tailwind", level: 5, icon: "/techIcons/TailwindCSS.png" },
+  { name: "Next.js", level: 4, icon: "/techIcons/Next.js.png" },
   { name: "TypeScript", level: 4, icon: "/techIcons/TypeScript.png" },
-  { name: "HTML", level: 5, icon: "/techIcons/HTML5.png" },
-  { name: "CSS", level: 5, icon: "/techIcons/CSS3.png" },
-  { name: "Bootstrap", level: 4, icon: "/techIcons/Bootstrap.png" },
-  { name: "SASS", level: 4, icon: "/techIcons/Sass.png" },
+  { name: "JavaScript", level: 5, icon: "/techIcons/JavaScript.png" },
+  { name: "Tailwind", level: 5, icon: "/techIcons/TailwindCSS.png" },
+  { name: "Redux", level: 4, icon: "/techIcons/Redux.png" },
+  { name: "Zustand", level: 4, icon: "/techIcons/zustand.png" },
+  { name: "Framer Mot.", level: 3, icon: "/techIcons/Framer-motion.png" },
+  { name: "Shadcn/UI", level: 4, icon: "/techIcons/Shadcn.png" },
+  { name: "HTML5", level: 5, icon: "/techIcons/HTML5.png" },
+  { name: "CSS3", level: 5, icon: "/techIcons/CSS3.png" },
 ];
 
-export const AdditionalToolsAndLibraries: Array<SkillType> = [
-  { name: "Git & Github", level: 4, icon: "/techIcons/Git.png" },
+export const BackendStack: Array<SkillType> = [
   { name: "Node.js", level: 3, icon: "/techIcons/Node.js.png" },
   { name: "Express.js", level: 3, icon: "/techIcons/Express.png" },
   { name: "MongoDB", level: 3, icon: "/techIcons/MongoDB.png" },
   { name: "Firebase", level: 3, icon: "/techIcons/Firebase.png" },
-  { name: "Jest", level: 3, icon: "/techIcons/Jest.png" },
-  { name: "RTL", level: 3, icon: "/techIcons/RTL.png" },
-  { name: "Redux", level: 4, icon: "/techIcons/Redux.png" },
-  { name: "Zustand", level: 4, icon: "/techIcons/zustand.png" },
-  { name: "Recharts", level: 4, icon: "/techIcons/Recharts.png" },
-  { name: "Shadcn", level: 4, icon: "/techIcons/Shadcn.png" },
-  { name: "MUI", level: 3, icon: "/techIcons/MaterialUI.png" },
-  { name: "Clerk", level: 3, icon: "/techIcons/Clerk.png" },
-  { name: "Framer motion", level: 3, icon: "/techIcons/Framer-motion.png" },
-  { name: "Formik", level: 3, icon: "/techIcons/Formik.png" },
-  { name: "Postman", level: 3, icon: "/techIcons/Postman.png" },
+  { name: "Clerk Auth", level: 3, icon: "/techIcons/Clerk.png" },
+  { name: "MySQL", level: 3, icon: "/techIcons/MySQL.png" },
+  { name: "Postman", level: 4, icon: "/techIcons/Postman.png" },
 ];
 
-export const FamiliarAndExplored: Array<SkillType> = [
-  { name: "Python", level: 3, icon: "/techIcons/Python.png" },
-  { name: "MySQL", level: 3, icon: "/techIcons/MySQL.png" },
-  { name: "C/C++", level: 4, icon: "/techIcons/Cpp.png" },
-  { name: "Dart/Flutter", level: 3, icon: "/techIcons/Flutter.png" },
+export const ToolsAndOthers: Array<SkillType> = [
+  { name: "Git & Github", level: 4, icon: "/techIcons/Git.png" },
+  { name: "Jest", level: 3, icon: "/techIcons/Jest.png" },
+  { name: "RTL", level: 3, icon: "/techIcons/RTL.png" },
   { name: "Linux", level: 3, icon: "/techIcons/Linux.png" },
   { name: "Figma", level: 3, icon: "/techIcons/Figma.png" },
+  { name: "Flutter", level: 3, icon: "/techIcons/Flutter.png" },
+  { name: "Python", level: 3, icon: "/techIcons/Python.png" },
+  { name: "C/C++", level: 4, icon: "/techIcons/Cpp.png" },
   { name: "WordPress", level: 4, icon: "/techIcons/WordPress.png" },
-  { name: "Shopify", level: 3, icon: "/techIcons/Shopify.png" },
 ];
 
 export type SideBarMenuType = {
@@ -259,6 +253,16 @@ export type ExperienceCardType = {
 };
 
 export const experiences: Array<ExperienceCardType> = [
+  {
+    companyLogo: "/topia-life-sciences.png",
+    companyName: "Topia Life Sciences",
+    role: "ReactJs and NextJs Developer",
+    startDate: "Jan 2026",
+    endDate: "Present",
+    points: [
+      "Collaborating on internal tools development using NextJs with TypeScript",
+    ],
+  },
   {
     companyLogo: "/tops-technologies.png",
     companyName: "Tops Technologies",

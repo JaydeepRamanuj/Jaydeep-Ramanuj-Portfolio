@@ -6,36 +6,29 @@ type SkillChipProps = {
   iconPath: string;
 };
 
-const SkillChip = ({ skill, level = 3, iconPath }: SkillChipProps) => {
+const SkillChip = ({ skill, iconPath }: SkillChipProps) => {
   return (
     <motion.span
       initial={{
         scale: 0.9,
-        // opacity: 0.6,
-        // filter: "blur(3px)",
         y: 10,
+        opacity: 0,
       }}
       whileInView={{
         scale: 1,
-        // opacity: 1,
-        // filter: "blur(0px)",
         y: 0,
+        opacity: 1,
       }}
+      viewport={{ once: true }}
       transition={{ duration: 0.3 }}
-      className={`grow flex md:flex-col gap-2 md:gap-0 items-center justify-center text-center py-1 px-2 md:p-4 rounded-full md:rounded-xl shadow-md text-neutral-200 border hover:scale-105 transition-transform md:min-w-[100px]         
-        ${level == 5 && "bg-green-500/60 border-green-500/60"}
-        ${level == 4 && "bg-green-300/60 border-green-300/60"}
-        ${level == 3 && "bg-yellow-300/20 border-yellow-300/20"}
-        ${level == 2 && "bg-orange-400/60 border-orange-400/60"}
-        ${level == 1 && "bg-red-400/30 border-red-300/30"}
-      `}
+      className="grow flex md:flex-col gap-2 md:gap-0 items-center justify-center text-center py-2 px-3 md:p-4 rounded-full md:rounded-xl shadow-sm border border-white/5 bg-neutral-800/20 hover:bg-neutral-800/40 hover:border-white/20 hover:scale-105 transition-all md:min-w-[100px]"
     >
       <img
         src={iconPath}
         alt={skill}
-        className="md:mb-2 rounded-lg h-4 md:h-14"
+        className="md:mb-2 rounded-lg h-5 md:h-12 w-auto object-contain p-0.5"
       />
-      <span className="text-xs md:font-semibold">{skill}</span>
+      <span className="text-xs md:text-sm font-medium text-neutral-300">{skill}</span>
     </motion.span>
   );
 };

@@ -23,27 +23,32 @@ const ExperienceCard = ({
   return (
     <motion.div
       initial={{
-        scale: 0.9,
-        opacity: 0.6,
+        scale: 0.95,
+        opacity: 0,
+        y: 20,
       }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.3 }}
-      className="p-3 sm:p-6 rounded-2xl bg-white/5 flex flex-col items-center lg:max-w-[750px] shadow-2xl text-gray-300 backdrop-blur-lg"
+      whileInView={{ opacity: 1, scale: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      className="w-full p-6 md:p-8 rounded-xl bg-neutral-900/40 border border-white/5 border-l-2 border-l-yellow-500/80 backdrop-blur-sm shadow-lg hover:bg-neutral-900/60 transition-colors max-w-4xl mx-auto"
     >
-      <div className="w-full flex flex-col sm:flex-row justify-between items-center gap-1 md:gap-3 sm:gap-0">
-        <div className="flex flex-col items-center">
-          <Image src={companyLogo} alt={companyName} width={50} height={50} />
-          <span className="text-sm md:text-base">{companyName}</span>
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+        <div className="flex items-center gap-4">
+          <div className="p-2 bg-white/5 rounded-lg">
+            <Image src={companyLogo} alt={companyName} width={40} height={40} className="object-contain" />
+          </div>
+          <div>
+            <h3 className="text-lg font-bold text-neutral-200">{companyName}</h3>
+            <p className="text-sm text-neutral-500 font-mono">{startDate} - {endDate}</p>
+          </div>
         </div>
-        <h2 className="text-sm md:text-xl font-semibold">{role}</h2>
-        <h3 className="text-xs md:text-base">
-          {startDate} - {endDate}
-        </h3>
+        <h2 className="text-xl md:text-2xl font-semibold text-gradient-gold">{role}</h2>
       </div>
-      <ul className="mt-6 px-3 lg:w-[70%] mx-auto text-neutral-400 text-sm md:text-base">
+      <ul className="pl-4 space-y-2">
         {points.map((point, index) => (
-          <li key={index} className="list-disc mt-2">
-            {point}
+          <li key={index} className="flex gap-3 text-neutral-300 text-sm md:text-base leading-relaxed">
+            <span className="min-w-[6px] h-[6px] rounded-full bg-yellow-500/50 mt-2.5"></span>
+            <span>{point}</span>
           </li>
         ))}
       </ul>

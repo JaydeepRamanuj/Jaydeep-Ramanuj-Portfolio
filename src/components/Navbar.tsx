@@ -3,13 +3,14 @@ import { navItems } from "@/app/data";
 import Link from "next/link";
 import { useState } from "react";
 import { IoMenu } from "react-icons/io5";
+import { AnimatePresence } from "motion/react";
 import SideBar from "./SideBar";
 
 const Navbar = () => {
   const [isSideBarVisible, setSideBar] = useState(false);
 
   return (
-    <nav className="fixed w-full z-50 bg-white/10 dark:bg-black/20 backdrop-blur-lg border-b border-white/10 shadow-md">
+    <nav className="fixed w-[100vw] z-50 bg-white/10 dark:bg-black/20 backdrop-blur-lg border-b border-white/10 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
@@ -41,7 +42,14 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <SideBar isSideBarVisible={isSideBarVisible} setSideBar={setSideBar} />
+      <AnimatePresence mode="wait">
+        {isSideBarVisible && (
+          <SideBar
+            isSideBarVisible={isSideBarVisible}
+            setSideBar={setSideBar}
+          />
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.className} bg-slate-950 text-white md:text-inherit  relative`}
+        className={`${inter.className} relative antialiased overflow-x-hidden`}
       >
         <Navbar />
         <main className="min-h-screen">{children}</main>

@@ -9,47 +9,70 @@ type SideBarType = {
 };
 
 function SideBar({ isSideBarVisible, setSideBar }: SideBarType) {
-  const containerVariants = {
-    hidden: {},
-    visible: {
+  const sidebarVariants = {
+    hidden: {
+      x: "100%",
+      opacity: 0,
       transition: {
-        staggerChildren: 0.1,
-      },
+        type: "spring" as const,
+        stiffness: 300,
+        damping: 30
+      }
     },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring" as const,
+        stiffness: 300,
+        damping: 30,
+        staggerChildren: 0.1,
+        delayChildren: 0.2
+      }
+    },
+    exit: {
+      x: "100%",
+      opacity: 0,
+      transition: {
+        type: "spring" as const,
+        stiffness: 300,
+        damping: 30
+      }
+    }
   };
 
-  const linksVariants = {
-    hidden: { opacity: 0, x: 50 },
-    visible: { opacity: 1, x: 0, duration: 0.3 },
+  const linkVariants = {
+    hidden: { opacity: 0, x: 20 },
+    visible: { opacity: 1, x: 0 },
+    exit: { opacity: 0, x: 20 }
   };
+
   return (
     <motion.div
-      variants={containerVariants}
+      variants={sidebarVariants}
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
-      className={`fixed top-0 left-0 w-full h-screen bg-black/80  backdrop-blur-3xl z-40 flex flex-col items-center justify-center space-y-6 transition-all duration-300 border-4 border-yellow-400/20   ${
-        isSideBarVisible ? "translate-x-0" : "translate-x-full"
-      }`}
+      animate="visible"
+      exit="exit"
+      className="fixed inset-0 w-full h-screen bg-black/90 backdrop-blur-2xl z-50 flex flex-col items-center justify-center space-y-8 border-l-2 border-yellow-500/20"
     >
+      <div
+        className="absolute top-6 right-6 p-2 bg-white/10 border border-white/20 rounded-full cursor-pointer hover:bg-white/20 active:scale-95 transition-all"
+        onClick={() => setSideBar(false)}
+      >
+        <IoClose className="text-2xl text-white" />
+      </div>
+
       {navItems.map((item) => (
         <motion.a
-          variants={linksVariants}
+          variants={linkVariants}
           key={item.name}
           href={item.href}
-          className="inline-block text-white text-lg font-medium hover:text-indigo-300 transition-colors"
+          className="text-2xl font-bold text-neutral-300 hover:text-yellow-400 transition-colors tracking-wide"
           onClick={() => setSideBar(false)}
         >
           {item.name}
         </motion.a>
       ))}
-
-      <div
-        className="absolute top-1/2 -translate-y-52 right-8 p-2 bg-white/10 border border-white/20 rounded-md cursor-pointer active:scale-95 backdrop-blur-md"
-        onClick={() => setSideBar(false)}
-      >
-        <IoClose className="text-2xl text-white" />
-      </div>
     </motion.div>
   );
 }

@@ -4,8 +4,11 @@ type SectionTitleType = {
 
 const SectionTitle = ({ title }: SectionTitleType) => {
   return (
-    <div className="block mt-6 w-fit px-2 md:px-4 mx-auto  py-0.5 md:py-1.5 rounded-full bg-yellow-400/10 text-yellow-300 text-sm md:text-base">
-      {title}
+    <div className="flex flex-col items-center mb-10 md:mb-16">
+      <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-500 pb-2">
+        {title}
+      </h2>
+      <div className="w-24 h-1 rounded-full bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-50"></div>
     </div>
   );
 };

@@ -51,100 +51,113 @@ const ProjectCard = ({
   return (
     <motion.div
       initial={{
-        scale: 0.97,
-        // opacity: 0.6,
-        y: 15,
-        // filter: "blur(5px)",
+        scale: 0.98,
+        y: 20,
+        opacity: 0,
       }}
       whileInView={{
         scale: 1,
-        // opacity: 1,
         y: 0,
-        // filter: "blur(0px)",
+        opacity: 1,
       }}
-      transition={{ duration: 0.3 }}
-      className={`bg-white/5 rounded-2xl shadow-xl overflow-hidden max-w-[1000px] p-2 md:p-6 transition-all hover:scale-[1.02] hover:shadow-2xl relative border-2 ${
-        isUnderDevelopment ? " border-orange-400/70" : "border-white/10"
-      }`}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4 }}
+      className={`group bg-neutral-900/40 rounded-xl overflow-hidden max-w-5xl w-full transition-all hover:bg-neutral-900/60 border border-white/5 ${isUnderDevelopment ? "border-orange-500/30" : "hover:border-yellow-500/20"
+        }`}
     >
-      <div className={`flex flex-col md:flex-row items-center`}>
+      <div className={`flex flex-col md:flex-row gap-6 p-4 md:p-6`}>
         {img && (
-          <div className="w-full md:w-1/2 relative h-48 md:h-72 p-4">
+          <div className="w-full md:w-[45%] relative aspect-video md:aspect-auto md:h-64 rounded-lg overflow-hidden border border-white/5 group-hover:border-white/10 transition-colors">
             <Image
               src={img}
               alt={title}
               fill
-              className="object-cover rounded-xl transition-transform duration-500 hover:scale-105"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
           </div>
         )}
 
-        <div className="p-4 md:p-6 text-white flex-1">
-          <h2 className="text-lg md:text-2xl font-semibold mb-3">{title}</h2>
-          <p className={"text-neutral-400 mb-5 text-sm"}>
-            <span className={`${readMore ? "" : "line-clamp-3"}`}>
-              {description}
-            </span>
-            <span
-              className="mt-2 text-neutral-200 underline underline-offset-2"
-              onClick={() => setReadMore((prev) => !prev)}
-            >
-              {readMore ? " read less" : " read more"}
-            </span>
-          </p>
-          <div className="flex flex-wrap gap-2 mb-4">
-            {tags.map((tag, index) => (
-              <span
-                key={index}
-                className="bg-white/10 border border-white/10 backdrop-blur-sm text-gray-200 rounded-full px-1.5 md:px-3 py-0.5  md:py-1 text-xs md:text-sm font-medium"
-              >
-                {tag}
+        <div className="flex-1 flex flex-col justify-between">
+          <div>
+            <div className="flex justify-between items-start mb-3">
+              <h2 className="text-2xl font-bold text-neutral-100 group-hover:text-yellow-200 transition-colors">{title}</h2>
+              <div className="flex gap-3">
+                {liveLink && <ExternalLink title="Live" link={liveLink} />}
+                {githubLink && <ExternalLink title="GitHub" link={githubLink} />}
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-2 mb-4">
+              {tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className="bg-neutral-800/80 border border-white/5 text-neutral-400 px-3 py-1 rounded-md text-xs font-mono"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <p className={"text-neutral-400 text-sm leading-relaxed mb-4"}>
+              <span className={`${readMore ? "" : "line-clamp-3"}`}>
+                {description}
               </span>
-            ))}
+              <button
+                className="ml-1 text-yellow-500/80 hover:text-yellow-400 text-xs font-medium uppercase tracking-wider"
+                onClick={() => setReadMore((prev) => !prev)}
+              >
+                {readMore ? "Show less" : "Read more"}
+              </button>
+            </p>
           </div>
-          <div className="flex items-center gap-4 flex-wrap">
-            {liveLink && <ExternalLink title="Live" link={liveLink} />}
-            {githubLink && <ExternalLink title="GitHub" link={githubLink} />}
+
+          <div className="flex items-center gap-4 flex-wrap mt-auto pt-4 border-t border-white/5">
             {specialLink && (
               <ExternalLink
-                title="Live with YouTube official API"
+                title="YouTube API Demo"
                 link={specialLink}
               />
+            )}
+
+            {/* Collapsible Details Trigger */}
+            {(specialMessage || specialNode) && (
+              <button
+                className="flex items-center gap-2 text-sm text-neutral-500 hover:text-neutral-300 transition-colors ml-auto"
+                onClick={() => {
+                  setShowMoreDetails((prev) => !prev);
+                }}
+              >
+                <span>Dev Details</span>
+                {showMoreDetails ? <FaAngleUp /> : <FaAngleDown />}
+              </button>
             )}
           </div>
         </div>
       </div>
-      {(specialMessage || specialNode) && (
-        <div
-          className="w-full border-t border-neutral-300/20 p-2 text-sm md:text-base mt-2"
-          onClick={() => {
-            setShowMoreDetails((prev) => !prev);
-          }}
+
+      {/* Expanded Details */}
+      {(specialMessage || specialNode) && showMoreDetails && (
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          className="bg-neutral-950/30 border-t border-white/5 p-4 md:p-6"
         >
-          <h3 className="flex justify-between items-center mb-2">
-            <span> More details</span>{" "}
-            {showMoreDetails ? <FaAngleUp /> : <FaAngleDown />}
-          </h3>
-          {showMoreDetails && (
-            <div>
-              {isUnderDevelopment && (
-                <div className="bg-orange-400/80 absolute text-white text-sm font-semibold text-center top-0 left-1/2 -translate-x-1/2 rounded-b-md px-3 py-1 shadow-md backdrop-blur-sm">
-                  This project is under development
-                </div>
-              )}
-
-              {specialMessage && (
-                <div
-                  className={`mt-3 ml-4 md:ml-0  px-3 py-1.5 text-white rounded text-sm w-fit font-semibold ${specialMessageStyle}`}
-                >
-                  {specialMessage}
-                </div>
-              )}
-
-              {specialNode && specialNode}
+          {isUnderDevelopment && (
+            <div className="inline-block px-3 py-1 rounded bg-orange-500/10 text-orange-400 border border-orange-500/20 text-xs font-semibold mb-3">
+              ⚠️ Under Development
             </div>
           )}
-        </div>
+
+          {specialMessage && (
+            <div
+              className={`px-4 py-2 rounded-md text-sm ${specialMessageStyle}`}
+            >
+              {specialMessage}
+            </div>
+          )}
+
+          {specialNode && <div className="mt-4">{specialNode}</div>}
+        </motion.div>
       )}
     </motion.div>
   );
